@@ -111,7 +111,7 @@ DROP TABLE tb_clientes;
         * A coluna nome vai ser do tipo varchar, de tamanho máximo 200. Não pode receber valores nulos.
         * A coluna descricao vai ser do tipo varchar, tamanho máximo 200. Não pode receber valores nulos
         * A coluna preco vai ser do tipo INT, nao pode receber valores nulos
-	2) Altere a coluna tb_produtos, modificando o tipo da coluna preco de INT para FLOAT
+	2) Altere a tabela tb_produtos, modificando o tipo da coluna preco de INT para FLOAT
     3) Insira os seguintes dados na tabela tb_produtos
 		Celular		iPhone XS		3000
         Bola		Topper			140
@@ -119,6 +119,42 @@ DROP TABLE tb_clientes;
         Notebook	Dell			5500
         Cadeira		Koerich			100
 	4) Insira uma nova coluna na tabela, chamada categoria_id. Essa coluna deve ter o valor padrão de 1
-    5) Atualize a informação de preço dos produtos acima de 3000. O novo preço terá 10% de desconto.
+    Dica: Utilize o parâmetro DEFAULT
+    5) Atualize a informação de preço dos produtos igual ou acima de 3000. O novo preço terá 10% de desconto.
+    
+   preco - (preco * 0.1)
+
 */
 
+# 1)
+CREATE TABLE IF NOT EXISTS tb_produtos(
+	id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(200) NOT NULL,
+    descricao VARCHAR(200) NOT NULL,
+    preco INTEGER NOT NULL
+);
+
+DESCRIBE tb_produtos;
+
+# 2)
+ALTER TABLE tb_produtos MODIFY preco FLOAT NOT NULL;
+DESCRIBE tb_produtos;
+
+# 3)
+INSERT INTO tb_produtos(nome, descricao, preco) VALUES
+	("Celular", "iPhone XS", 3000),
+    ("Bola", "Topper", 140),
+    ("Mouse", "Multilaser", 90),
+    ("Notebook", "Dell", 5500),
+    ("Cadeira", "Koerich", 100);
+SELECT * FROM tb_produtos;
+
+# 4)
+ALTER TABLE tb_produtos ADD COLUMN categoria_id INT DEFAULT 1;
+SELECT * FROM tb_produtos;
+
+# 5)
+UPDATE tb_produtos SET preco = (preco - (preco * 0.1)) WHERE preco >= 3000;
+SELECT * FROM tb_produtos;
+
+DROP TABLE tb_produtos;
