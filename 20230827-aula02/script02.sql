@@ -144,3 +144,75 @@ INSERT INTO tb_postagens(usuario_id, titulo, texto, data_hora_criacao) VALUES
 	(2, "A importância do UX", "UX é muito importante para o sistema", "2023-08-27 11:00:00");
     
 SELECT * FROM tb_postagens;
+
+-- --------------------------------------------------------------------------------------------
+
+/*
+No processo que foi modelado, identificamos que uma postagem pode estar dentro de n categorias,
+e uma categoria pode estar associada a diversas postagens
+
+Nesse caso, temos uma relação de Muitos para Muitos (N:N). Quando isso acontece, precisamos criar
+uma tabela de ligação, conhecida como tabela associativa. Nessa tabela associativa irão as
+chaves estrangeiras que farão a ligação entre Post e Categoria
+*/
+
+-- Primeiro criamos a tabela de categorias
+CREATE TABLE IF NOT EXISTS tb_categorias(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(200) NOT NULL
+);
+
+INSERT INTO tb_categorias(nome) VALUES
+	("proway"),
+    ("programação"),
+    ("sql"),
+    ("design"),
+    ("carreira"),
+    ("python"),
+    ("java"),
+    ("golang");
+    
+SELECT * FROM tb_categorias;
+
+-- Criamos a tabela associativa, que irá fazer a ligação entre Post e Categoria
+
+CREATE TABLE IF NOT EXISTS tb_postagens_categorias(
+	postagem_id INT NOT NULL,
+    categoria_id INT NOT NULL,
+    
+    PRIMARY KEY(postagem_id, categoria_id),
+    
+    FOREIGN KEY(postagem_id) REFERENCES tb_postagens(id),
+    FOREIGN KEY(categoria_id) REFERENCES tb_categorias(id)
+);
+
+-- Associando categorias à postagem de id 1 (Python)
+INSERT INTO tb_postagens_categorias(postagem_id, categoria_id) VALUES
+	(1, 1),
+    (1, 2),
+    (1, 6);
+    
+-- Associando categorias à postagem de id 2 (Java)
+INSERT INTO tb_postagens_categorias(postagem_id, categoria_id) VALUES
+	(2, 1),
+    (2, 2),
+    (2, 7);
+    
+-- Associando categorias à postagem de id 3 (Golang)
+INSERT INTO tb_postagens_categorias(postagem_id, categoria_id) VALUES
+	(3, 1),
+    (3, 2),
+    (3, 8);
+    
+-- Associando categorias à postagem de id 4 (UX)
+INSERT INTO tb_postagens_categorias(postagem_id, categoria_id) VALUES
+	(4, 4);
+    
+SELECT * FROM tb_postagens_categorias;
+
+-- Selecionando as postagens e as categorias associadas.
+SELECT tbp.id, tbp.titulo, tbc.nome AS "categoria" FROM tb_postagens tbp
+INNER JOIN tb_postagens_categorias tbpc
+ON tbp.id = tbpc.postagem_id
+INNER JOIN tb_categorias tbc
+ON tbpc.categoria_id = tbc.id;
