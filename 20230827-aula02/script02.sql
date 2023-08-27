@@ -90,7 +90,57 @@ INSERT INTO tb_perfis(id, nome, sobrenome, data_de_nascimento, sexo) VALUES
 -- A chave estrangeira que indicamos na criação da tabela tb_perfis proíbe isso.
 INSERT INTO tb_perfis(id, nome, sobrenome, data_de_nascimento, sexo) VALUES
 	(1000, "ET", "de Varginha", "1800-01-01", NULL);
+
+-- --------------------------------------------------------------------------------------------
+
+/*
+No processo que foi modelado, identificamos que um usuário pode fazer várias postagens, porém
+uma postagem tem como autor apenas 1 usuário.
+
+Nesse caso, teremos uma relação de 1:N entre Usuario e Postagem. Quando temos esse tipo de relação,
+sempre devemos criar a chave estrangeira na tabela filha (ou, tabela dependente), que é a tabela
+que representa a entidade no lado 'N' da relação.
+*/
+
+-- Criar a tabela tb_postagens
+CREATE TABLE IF NOT EXISTS tb_postagens(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    usuario_id INT NOT NULL,
+    titulo VARCHAR(200) NOT NULL,
+    texto TEXT NOT NULL,
+    data_hora_criacao DATETIME DEFAULT NOW(),
     
-Error Code: 1452. Cannot add or update a child row: a foreign key constraint fails 
-(`curso_mysql_proway_20230827_aula02`.`tb_perfis`, CONSTRAINT `tb_perfis_ibfk_1` FOREIGN KEY (`id`) 
-REFERENCES `tb_usuarios` (`id`))
+    FOREIGN KEY(usuario_id) REFERENCES tb_usuarios(id)
+);
+
+DESCRIBE tb_postagens;
+
+-- Criando as postagens
+
+INSERT INTO tb_postagens(usuario_id, titulo, texto) VALUES
+	(1, "A linguagem Python", "Python é bem legal"),
+    (1, "A linguagem Java", "Java é complexo"),
+    (1, "A linguagem Golang", "Golang é rápida");
+    
+SELECT * FROM tb_postagens;
+
+-- Criando novos usuários e novos perfis
+INSERT INTO tb_usuarios (email, senha, data_hora_criacao) VALUES
+	("maria@email.com", "123", "2022-09-08 22:13:45"),
+    ("jose@email.com", "123", NOW());
+    
+INSERT INTO tb_perfis(id, nome, sobrenome, data_de_nascimento, sexo) VALUES
+	(2, "Maria", "das Graças", NULL, "F"),
+    (3, "José", "de Arimatéia", "1976-01-29", "M");
+
+UPDATE tb_perfis SET nome = "João" WHERE id = 3;
+UPDATE tb_usuarios SET email = "joao@email.com" WHERE id = 3;
+
+SELECT tbp.nome, tbp.sobrenome, tbu.email FROM tb_usuarios tbu
+INNER JOIN tb_perfis tbp
+ON tbu.id = tbp.id;
+
+INSERT INTO tb_postagens(usuario_id, titulo, texto, data_hora_criacao) VALUES
+	(2, "A importância do UX", "UX é muito importante para o sistema", "2023-08-27 11:00:00");
+    
+SELECT * FROM tb_postagens;
