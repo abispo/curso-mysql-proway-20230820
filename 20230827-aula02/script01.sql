@@ -60,4 +60,33 @@ tb_inscricoes
     
 Aplique a Segunda Forma Normal 2FN na tabela acima.
 
+Nesse caso, vamos precisar criar as relações entre as tabelas
+
 */
+
+-- 1º Passo: Criar a tabela tb_estudantes
+CREATE TABLE IF NOT EXISTS tb_estudantes(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(200) NOT NULL,
+    documento VARCHAR(11) NOT NULL
+);
+
+-- 2º Passo: Criar a tabela tb_cursos
+CREATE TABLE IF NOT EXISTS tb_cursos(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(200) NOT NULL,
+    data_inicio DATE NOT NULL
+);
+
+-- 3º Passo: Criar a tabela de inscrições. Ela terá referências a alunos e cursos
+CREATE TABLE IF NOT EXISTS tb_inscricoes(
+	id INT AUTO_INCREMENT,
+    estudante_id INT NOT NULL,
+    curso_id INT NOT NULL,
+    data_da_inscricao DATETIME NOT NULL,
+    
+    PRIMARY KEY(id, estudante_id, curso_id),
+    
+    FOREIGN KEY (estudante_id) REFERENCES tb_estudantes(id),
+    FOREIGN KEY (curso_id) REFERENCES tb_cursos(id)
+);
