@@ -151,13 +151,54 @@ Exercício
 
 Aplique a terceira forma normal na tabela a seguir
 
-tb_pedidos
-	* pedido_id		INT NOT NULL
-    * item_id		INT NOT NULL
+tb_pedidos_itens
+	* pedido_id		INT 
+    * item_id		INT 
 	* valor_unitario FLOAT NOT NULL
     * quantidade	INT NOT NULL
     * subtotal		FLOAT NOT NULL
     
+    PRIMARY KEY (pedido_id, item_id)
+    
     Crie 5 registros para ilustrar melhor o comportamento antes e depois da aplicação
     da 3FN
 */
+
+CREATE TABLE IF NOT EXISTS tb_pedidos_itens(
+	pedido_id INT NOT NULL,
+    item_id INT NOT NULL,
+    valor_unitario FLOAT NOT NULL,
+    quantidade INT NOT NULL,
+    subtotal FLOAT NOT NULL,
+    
+    PRIMARY KEY(pedido_id, item_id)
+);
+
+INSERT INTO tb_pedidos_itens(
+	pedido_id, item_id, valor_unitario, quantidade, subtotal
+) VALUES
+	(1, 1, 10, 2, 20),
+    (1, 2, 2.50, 4, 10),
+    (1, 5, 20, 3, 60),
+    (2, 1, 10, 3, 30),
+    (3, 3, 5.50, 3, 16.50);
+
+SELECT * FROM tb_pedidos_itens;
+
+-- 1º Passo: Remover a coluna subtotal da tabela tb_pedidos_itens
+ALTER TABLE tb_pedidos_itens DROP COLUMN subtotal;
+
+DESCRIBE tb_pedidos_itens;
+
+-- 2º Passo. Vamos criar uma View que fará a consulta sempre que for chamada
+CREATE VIEW vw_pedidos_itens AS
+SELECT
+	pedido_id,
+    item_id,
+    valor_unitario,
+    quantidade,
+    FORMAT(valor_unitario * quantidade, 2) AS "Subtotal"
+FROM tb_pedidos_itens;
+
+-- 3º Passo: Chamando a nossa view
+SELECT * FROM vw_pedidos_itens;
