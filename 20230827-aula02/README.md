@@ -106,6 +106,7 @@ Aplique a terceira forma normal para as seguintes tabelas
     | 9  | Câmera Canon            | 300.00          | 450.00         | 33.33%          |
     | 10 | Bicicleta Trek          | 400.00          | 600.00         | 33.33%          |
 
+
 * Tabela: `tb_livros`
 
     | *id | genero_id | genero_tipo   | preco  |
@@ -124,3 +125,74 @@ Aplique a terceira forma normal para as seguintes tabelas
 
 
 ## Exercícios de cardinalidade
+
+### Um Para Um (1:1):
+
+1. Relacionamento entre Aluno e Bolsa de Estudo:
+    * Crie uma tabela tb_alunos com colunas id, nome e curso.
+    * Crie uma tabela tb_bolsas_de_estudo com colunas id, tipo e porcentagem.
+    * Estabeleça um relacionamento 1:1 entre um aluno e bolsa de estudo.
+
+2. Relacionamento entre Cliente e Cartão de Crédito:
+    * Crie uma tabela tb_clientes com colunas id, nome e email.
+    * Crie uma tabela tb_cartoes_credito com colunas id, numero e data_validade.
+    * Estabeleça um relacionamento 1:1 entre um cliente e seu cartão de crédito.
+
+3. Relacionamento entre Funcionário e Documento de Identificação:
+    * Crie uma tabela tb_funcionarios com colunas id, nome e cargo.
+    * Crie uma tabela tb_documentos com colunas id, tipo e numero.
+    * Estabeleça um relacionamento 1:1 entre um funcionário e seu documento de identificação.
+
+4. Relacionamento entre Veículo e Placa:
+    * Crie uma tabela tb_veiculos com colunas id, marca e modelo.
+    * Crie uma tabela tb_placas com colunas id e numero.
+    * Estabeleça um relacionamento 1:1 entre um veículo e sua placa.
+
+### Um para Muitos (1:N):
+
+1. Relacionamento entre Autor e Livros:
+    * Crie uma tabela tb_autores com colunas id, nome e nacionalidade.
+    * Crie uma tabela tb_livros com colunas id, titulo e ano.
+    * Estabeleça um relacionamento 1:N entre um autor e seus livros.
+
+2. Relacionamento entre Departamento e Funcionários:
+    * Crie uma tabela tb_departamentos com colunas id e nome.
+    * Crie uma tabela tb_funcionarios com colunas id, nome e salario.
+    * Estabeleça um relacionamento 1:N entre um departamento e seus funcionários.
+
+3. Relacionamento entre Escola e Alunos:
+    * Crie uma tabela tb_escolas com colunas id, nome e endereco.
+    * Crie uma tabela tb_alunos com colunas id, nome e idade.
+    * Estabeleça um relacionamento 1:N entre uma escola e seus alunos.
+
+4. Relacionamento entre Empresa e Projetos:
+    * Crie uma tabela tb_empresas com colunas id, nome e setor.
+    * Crie uma tabela tb_projetos com colunas id, nome e data_inicio.
+    * Estabeleça um relacionamento 1:N entre uma empresa e seus projetos.
+
+5. Relacionamento entre Autor e Artigos:
+    * Crie uma tabela tb_autores com colunas id, nome e nacionalidade.
+    * Crie uma tabela tb_artigos com colunas id, titulo e data_publicacao.
+    * Estabeleça um relacionamento 1:N entre um autor e seus artigos.
+
+### Muitos para Muitos (N:N):
+
+1. Relacionamento entre Alunos e Disciplinas:
+    * Crie uma tabela tb_alunos com colunas id, nome e curso.
+    * Crie uma tabela tb_disciplinas com colunas id e nome.
+    * Crie uma tabela associativa tb_alunos_disciplinas com colunas aluno_id e disciplina_id para representar o relacionamento N:N entre alunos e disciplinas.
+
+2. Relacionamento entre Músicas e Playlists:
+    * Crie uma tabela tb_musicas com colunas id, nome e artista.
+    * Crie uma tabela tb_playlists com colunas id e nome.
+    * Crie uma tabela associativa tb_musicas_playlists com colunas musica_id e playlist_id para representar o relacionamento N:N entre músicas e playlists.
+
+3. Relacionamento entre Atletas e Competições:
+    * Crie uma tabela tb_atletas com colunas id, nome e pais.
+    * Crie uma tabela tb_competicoes com colunas id, nome e data.
+    * Crie uma tabela associativa tb_atletas_competicoes com colunas atleta_id e competicao_id para representar o relacionamento N:N entre atletas e competições.
+
+4. Relacionamento entre Estudantes e Clubes:
+    * Crie uma tabela tb_estudantes com colunas id, nome e idade.
+    * Crie uma tabela tb_clubes com colunas id e nome.
+    * Crie uma tabela associativa tb_estudantes_clubes com colunas estudante_id e clube_id para representar o relacionamento N:N entre estudantes e clubes.
