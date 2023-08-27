@@ -90,3 +90,74 @@ CREATE TABLE IF NOT EXISTS tb_inscricoes(
     FOREIGN KEY (estudante_id) REFERENCES tb_estudantes(id),
     FOREIGN KEY (curso_id) REFERENCES tb_cursos(id)
 );
+
+-- ----------------------------------------------------------------
+
+/*
+Terceira Forma Normal (3FN)
+
+A Terceira Forma Normal (3FN) exige que:
+
+* A tabela esteja na Segunda Forma Normal
+* Todos os campos não chave da tabela dependam exclusivamente da chave primária.
+
+*/
+
+CREATE TABLE IF NOT EXISTS tb_artilharia(
+	artilheiro_id INT PRIMARY KEY,
+    nome VARCHAR(200) NOT NULL,
+    quantidade_partidas INT NOT NULL,
+    quantidade_gols INT NOT NULL,
+    media_por_partida FLOAT NOT NULL
+);
+
+INSERT INTO tb_artilharia(
+	artilheiro_id, nome, quantidade_partidas, quantidade_gols, media_por_partida
+) VALUES
+	(1, "Lionel Messi", 40, 36, 0.9),
+    (2, "Cristiano Ronaldo", 40, 28, 0.7),
+    (3, "Ronaldinho Gaúcho", 40, 31, 0.775),
+    (4, "Kaká", 40, 22, 0.55),
+    (5, "Harry Kane", 40, 19, 0.475);
+    
+SELECT * FROM tb_artilharia ORDER BY quantidade_gols DESC;
+
+/*
+No caso acima, a 3FN não está sendo atingida pois a coluna media_por_partida depende
+das colunas quantidade_partidas e quantidade_gols, que não são chave primária da tabela.
+Nesse caso, devemos remover a coluna media_por_partida da tabela e gerá-la
+dinamicamente em uma cláusula SELECT.
+*/
+
+-- Removendo a coluna media_por_partida
+ALTER TABLE tb_artilharia DROP COLUMN media_por_partida;
+
+DESCRIBE tb_artilharia;
+
+-- Podemos usar a cláusula AS para gerar colunas em tempo de execução.
+-- Atenção! Essas colunas não são criadas fisicamente, elas só existem durante a
+-- execução do comando
+
+SELECT
+	nome,
+    quantidade_partidas,
+    quantidade_gols,
+    FORMAT(quantidade_gols / quantidade_partidas, 2) AS "Média de gols por partida"
+FROM tb_artilharia
+ORDER BY quantidade_gols DESC;
+
+/*
+Exercício
+
+Aplique a terceira forma normal na tabela a seguir
+
+tb_pedidos
+	* pedido_id		INT NOT NULL
+    * item_id		INT NOT NULL
+	* valor_unitario FLOAT NOT NULL
+    * quantidade	INT NOT NULL
+    * subtotal		FLOAT NOT NULL
+    
+    Crie 5 registros para ilustrar melhor o comportamento antes e depois da aplicação
+    da 3FN
+*/
