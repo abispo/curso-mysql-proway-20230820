@@ -216,3 +216,35 @@ INNER JOIN tb_postagens_categorias tbpc
 ON tbp.id = tbpc.postagem_id
 INNER JOIN tb_categorias tbc
 ON tbpc.categoria_id = tbc.id;
+
+/*
+Exercícios
+
+Modelar a tabelas do sistema de registro de estudantes e turmas. Aplicar as relações
+de 1:1, 1:N e N:Nz
+
+dados de estudante
+id
+nome
+data de nascimento
+
+dados de matricula
+id
+data da matricula
+observacoes
+
+dados de turma
+id
+nome da turma
+
+dados de curso
+id
+nome
+data de inicio
+data de fim
+
+Regras
+* 1 estudante possui uma matrícula, e 1 matrícula está associada a apenas 1 estudando
+* 1 Curso pode ter várias turmas, mas 1 turma está associada a apenas 1 curso
+* 1 Estudante pode fazer parte de várias turmas, e uma turma pode ter vários estudantes
+*/
