@@ -104,3 +104,8 @@ FROM tb_orders
     ORDER BY qtd_vendas DESC;
     
 -- Exemplo 2: Retornar o nome do entregador e quantos pedidos estão associados a ela
+SELECT b.shipper_id, b.shipper_name, COUNT(a.shipper_id) as qtd FROM tb_orders a
+INNER JOIN tb_shippers b
+ON a.shipper_id = b.shipper_id
+GROUP BY (a.shipper_id)
+ORDER BY qtd DESC;
