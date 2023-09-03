@@ -71,3 +71,36 @@ SELECT * FROM tb_suppliers WHERE country IN ("USA", "Japan", "Australia");
 -- Verifica se o valor de uma coluna é nula / não é nula
 -- Exemplo: Trazendo as linhas da tabela tb_customers quando o postal_code for nulo
 SELECT * FROM tb_customers WHERE postal_code IS NULL;
+
+-- Funções de agregação.
+-- Utilizamos as funções de agregação quando queremos calcular um determinado valor dentro de um
+-- conjunto específico de dados. Ou seja, quando queremos "sumarizar" de alguma forma as 
+-- informações.
+
+-- Exemplo: Utilizamos a função COUNT(*) para contar quantos registros existem em uma tabela
+SELECT COUNT(*) FROM tb_customers;
+
+-- Fora o COUNT, temos as seguintes funções de agregação:
+-- MIN e MAX: Mostram o maior e o menor valor de uma coluna. Exemplo:
+-- Mostrar o maior e o menor preço na tabela tb_products
+SELECT MAX(price), MIN(price) FROM tb_products;
+
+-- AVG: Retorna a média de valores de uma coluna
+-- Exemplo: Retornar o preço médio dos produtos da tabela tb_products
+SELECT FORMAT(AVG(price), 2) FROM tb_products;
+
+-- SUM: Soma os valores de uma coluna e retorna o resultado
+-- Exemplo: Retornar a soma de todos os valores dos produtos
+SELECT SUM(price) FROM tb_products;
+
+-- Funções de agregação são muito úteis, principalmente quando usadas em conjunto com a cláusula
+-- GROUP BY.
+-- A cláusula GROUP BY agrupa as informações por coluna
+-- Exemplo: Retornar quantas vendas cada funcionário realizou
+
+SELECT employee_id, COUNT(employee_id) AS qtd_vendas
+FROM tb_orders
+	GROUP BY(employee_id)
+    ORDER BY qtd_vendas DESC;
+    
+-- Exemplo 2: Retornar o nome do entregador e quantos pedidos estão associados a ela
