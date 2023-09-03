@@ -318,205 +318,203 @@ CREATE TABLE tb_orders (
 );
 
 -- Inserção dos dados
-INSERT INTO tb_orders (order_id, customer_id, employee_id, order_date, shipper_id)
-VALUES
-INSERT INTO tb_orders (order_id, customer_id, employee_id, order_date, shipper_id) VALUES
-(10248, 90, 5, '1996-07-04', 3),
-(10249, 81, 6, '1996-07-05', 1),
-(10250, 34, 4, '1996-07-08', 2),
-(10251, 84, 3, '1996-07-08', 1),
-(10252, 76, 4, '1996-07-09', 2),
-(10253, 34, 3, '1996-07-10', 2),
-(10254, 14, 5, '1996-07-11', 2),
-(10255, 68, 9, '1996-07-12', 3),
-(10256, 88, 3, '1996-07-15', 2),
-(10257, 35, 4, '1996-07-16', 3),
-(10258, 20, 1, '1996-07-17', 1),
-(10259, 13, 4, '1996-07-18', 3),
-(10260, 55, 4, '1996-07-19', 1),
-(10261, 61, 4, '1996-07-19', 2),
-(10262, 65, 8, '1996-07-22', 3),
-(10263, 20, 9, '1996-07-23', 3),
-(10264, 24, 6, '1996-07-24', 3),
-(10265, 7, 2, '1996-07-25', 1),
-(10266, 87, 3, '1996-07-26', 3),
-(10267, 25, 4, '1996-07-29', 1),
-(10268, 33, 8, '1996-07-30', 3),
-(10269, 89, 5, '1996-07-31', 1),
-(10270, 87, 1, '1996-08-01', 1),
-(10271, 75, 6, '1996-08-01', 2),
-(10272, 65, 6, '1996-08-02', 2),
-(10273, 63, 3, '1996-08-05', 3),
-(10274, 85, 6, '1996-08-06', 1),
-(10275, 49, 1, '1996-08-07', 1),
-(10276, 80, 8, '1996-08-08', 3),
-(10277, 52, 2, '1996-08-09', 3),
-(10278, 5, 8, '1996-08-12', 2),
-(10279, 44, 8, '1996-08-13', 2),
-(10280, 5, 2, '1996-08-14', 1),
-(10281, 69, 4, '1996-08-14', 1),
-(10282, 69, 4, '1996-08-15', 1),
-(10283, 46, 3, '1996-08-16', 3),
-(10284, 44, 4, '1996-08-19', 1),
-(10285, 63, 1, '1996-08-20', 2),
-(10286, 63, 8, '1996-08-21', 3),
-(10287, 67, 8, '1996-08-22', 3),
-(10288, 66, 4, '1996-08-23', 1),
-(10289, 11, 7, '1996-08-26', 3),
-(10290, 15, 8, '1996-08-27', 1),
-(10291, 61, 6, '1996-08-27', 2),
-(10292, 81, 1, '1996-08-28', 2),
-(10293, 80, 1, '1996-08-29', 3),
-(10294, 65, 4, '1996-08-30', 2),
-(10295, 85, 2, '1996-09-02', 2),
-(10296, 46, 6, '1996-09-03', 1),
-(10297, 7, 5, '1996-09-04', 2),
-(10298, 37, 6, '1996-09-05', 2),
-(10299, 67, 4, '1996-09-06', 2),
-(10300, 49, 2, '1996-09-09', 2),
-(10301, 86, 8, '1996-09-09', 2),
-(10302, 76, 4, '1996-09-10', 2),
-(10303, 30, 7, '1996-09-11', 2),
-(10304, 80, 1, '1996-09-12', 2),
-(10305, 55, 8, '1996-09-13', 3),
-(10306, 69, 1, '1996-09-16', 3),
-(10307, 48, 2, '1996-09-17', 2),
-(10308, 2, 7, '1996-09-18', 3),
-(10309, 37, 3, '1996-09-19', 1),
-(10310, 77, 8, '1996-09-20', 2),
-(10311, 18, 1, '1996-09-20', 3),
-(10312, 86, 2, '1996-09-23', 2),
-(10313, 63, 2, '1996-09-24', 2),
-(10314, 65, 1, '1996-09-25', 2),
-(10315, 38, 4, '1996-09-26', 2),
-(10316, 65, 1, '1996-09-27', 3),
-(10317, 48, 6, '1996-09-30', 1),
-(10318, 38, 8, '1996-10-01', 2),
-(10319, 80, 7, '1996-10-02', 3),
-(10320, 87, 5, '1996-10-03', 3),
-(10321, 38, 3, '1996-10-03', 2),
-(10322, 58, 7, '1996-10-04', 3),
-(10323, 39, 4, '1996-10-07', 1),
-(10324, 71, 9, '1996-10-08', 1),
-(10325, 39, 1, '1996-10-09', 3),
-(10326, 8, 4, '1996-10-10', 2),
-(10327, 24, 2, '1996-10-11', 1),
-(10328, 28, 4, '1996-10-14', 3),
-(10329, 75, 4, '1996-10-15', 2),
-(10330, 46, 3, '1996-10-16', 1),
-(10331, 9, 9, '1996-10-16', 1),
-(10332, 51, 3, '1996-10-17', 2),
-(10333, 87, 5, '1996-10-18', 3),
-(10334, 84, 8, '1996-10-21', 2),
-(10335, 37, 7, '1996-10-22', 2),
-(10336, 60, 7, '1996-10-23', 2),
-(10337, 25, 4, '1996-10-24', 3),
-(10338, 55, 4, '1996-10-25', 3),
-(10339, 51, 2, '1996-10-28', 2),
-(10340, 9, 1, '1996-10-29', 3),
-(10341, 73, 7, '1996-10-29', 3),
-(10342, 25, 4, '1996-10-30', 2),
-(10343, 44, 4, '1996-10-31', 1),
-(10344, 89, 4, '1996-11-01', 2),
-(10345, 63, 2, '1996-11-04', 2),
-(10346, 65, 3, '1996-11-05', 3),
-(10347, 21, 4, '1996-11-06', 3),
-(10348, 86, 4, '1996-11-07', 2),
-(10349, 75, 7, '1996-11-08', 1),
-(10350, 41, 6, '1996-11-11', 2),
-(10351, 20, 1, '1996-11-11', 1),
-(10352, 28, 3, '1996-11-12', 3),
-(10353, 59, 7, '1996-11-13', 3),
-(10354, 58, 8, '1996-11-14', 3),
-(10355, 4, 6, '1996-11-15', 1),
-(10356, 86, 6, '1996-11-18', 2),
-(10357, 46, 1, '1996-11-19', 3),
-(10358, 41, 5, '1996-11-20', 1),
-(10359, 72, 5, '1996-11-21', 3),
-(10360, 7, 4, '1996-11-22', 3),
-(10361, 63, 1, '1996-11-22', 2),
-(10362, 9, 3, '1996-11-25', 1),
-(10363, 17, 4, '1996-11-26', 3),
-(10364, 19, 1, '1996-11-26', 1),
-(10365, 3, 3, '1996-11-27', 2),
-(10366, 29, 8, '1996-11-28', 2),
-(10367, 83, 7, '1996-11-28', 3),
-(10368, 20, 2, '1996-11-29', 2),
-(10369, 75, 8, '1996-12-02', 2),
-(10370, 14, 6, '1996-12-03', 2),
-(10371, 41, 1, '1996-12-03', 1),
-(10372, 62, 5, '1996-12-04', 2),
-(10373, 37, 4, '1996-12-05', 3),
-(10374, 91, 1, '1996-12-05', 3),
-(10375, 36, 3, '1996-12-06', 2),
-(10376, 51, 1, '1996-12-09', 2),
-(10377, 72, 1, '1996-12-09', 3),
-(10378, 24, 5, '1996-12-10', 3),
-(10379, 61, 2, '1996-12-11', 1),
-(10380, 37, 8, '1996-12-12', 3),
-(10381, 46, 3, '1996-12-12', 3),
-(10382, 20, 4, '1996-12-13', 1),
-(10383, 4, 8, '1996-12-16', 3),
-(10384, 5, 3, '1996-12-16', 3),
-(10385, 75, 1, '1996-12-17', 2),
-(10386, 21, 9, '1996-12-18', 3),
-(10387, 70, 1, '1996-12-18', 2),
-(10388, 72, 2, '1996-12-19', 1),
-(10389, 10, 4, '1996-12-20', 2),
-(10390, 20, 6, '1996-12-23', 1),
-(10391, 17, 3, '1996-12-23', 3),
-(10392, 59, 2, '1996-12-24', 3),
-(10393, 71, 1, '1996-12-25', 3),
-(10394, 36, 1, '1996-12-25', 3),
-(10395, 35, 6, '1996-12-26', 1),
-(10396, 25, 1, '1996-12-27', 3),
-(10397, 60, 5, '1996-12-27', 1),
-(10398, 71, 2, '1996-12-30', 3),
-(10399, 83, 8, '1996-12-31', 3),
-(10400, 19, 1, '1997-01-01', 3),
-(10401, 65, 1, '1997-01-01', 1),
-(10402, 20, 8, '1997-01-02', 2),
-(10403, 20, 4, '1997-01-03', 3),
-(10404, 49, 2, '1997-01-03', 1),
-(10405, 47, 1, '1997-01-06', 1),
-(10406, 62, 7, '1997-01-07', 1),
-(10407, 56, 2, '1997-01-07', 2),
-(10408, 23, 8, '1997-01-08', 1),
-(10409, 54, 3, '1997-01-09', 1),
-(10410, 10, 3, '1997-01-10', 3),
-(10411, 10, 9, '1997-01-10', 3),
-(10412, 87, 8, '1997-01-13', 2),
-(10413, 41, 3, '1997-01-14', 2),
-(10414, 21, 2, '1997-01-14', 3),
-(10415, 36, 3, '1997-01-15', 1),
-(10416, 87, 8, '1997-01-16', 3),
-(10417, 73, 4, '1997-01-16', 3),
-(10418, 63, 4, '1997-01-17', 1),
-(10419, 68, 4, '1997-01-20', 2),
-(10420, 88, 3, '1997-01-21', 1),
-(10421, 61, 8, '1997-01-21', 1),
-(10422, 27, 2, '1997-01-22', 1),
-(10423, 31, 6, '1997-01-23', 3),
-(10424, 51, 7, '1997-01-23', 2),
-(10425, 41, 6, '1997-01-24', 2),
-(10426, 29, 4, '1997-01-27', 1),
-(10427, 59, 4, '1997-01-27', 2),
-(10428, 66, 7, '1997-01-28', 1),
-(10429, 37, 3, '1997-01-29', 2),
-(10430, 20, 4, '1997-01-30', 1),
-(10431, 10, 4, '1997-01-30', 2),
-(10432, 75, 3, '1997-01-31', 2),
-(10433, 60, 3, '1997-02-03', 3),
-(10434, 24, 3, '1997-02-03', 2),
-(10435, 16, 8, '1997-02-04', 2),
-(10436, 7, 3, '1997-02-05', 2),
-(10437, 87, 8, '1997-02-05', 1),
-(10438, 79, 3, '1997-02-06', 2),
-(10439, 51, 6, '1997-02-07', 3),
-(10440, 71, 4, '1997-02-10', 2),
-(10441, 55, 3, '1997-02-10', 2),
-(10442, 20, 3, '1997-02-11', 2),
-(10443, 66, 8, '1997-02-12', 1);
+INSERT INTO tb_orders VALUES (10248, 90, 5, '1996-07-04', 3);
+INSERT INTO tb_orders VALUES (10249, 81, 6, '1996-07-05', 1);
+INSERT INTO tb_orders VALUES (10250, 34, 4, '1996-07-08', 2);
+INSERT INTO tb_orders VALUES (10251, 84, 3, '1996-07-08', 1);
+INSERT INTO tb_orders VALUES (10252, 76, 4, '1996-07-09', 2);
+INSERT INTO tb_orders VALUES (10253, 34, 3, '1996-07-10', 2);
+INSERT INTO tb_orders VALUES (10254, 14, 5, '1996-07-11', 2);
+INSERT INTO tb_orders VALUES (10255, 68, 9, '1996-07-12', 3);
+INSERT INTO tb_orders VALUES (10256, 88, 3, '1996-07-15', 2);
+INSERT INTO tb_orders VALUES (10257, 35, 4, '1996-07-16', 3);
+INSERT INTO tb_orders VALUES (10258, 20, 1, '1996-07-17', 1);
+INSERT INTO tb_orders VALUES (10259, 13, 4, '1996-07-18', 3);
+INSERT INTO tb_orders VALUES (10260, 55, 4, '1996-07-19', 1);
+INSERT INTO tb_orders VALUES (10261, 61, 4, '1996-07-19', 2);
+INSERT INTO tb_orders VALUES (10262, 65, 8, '1996-07-22', 3);
+INSERT INTO tb_orders VALUES (10263, 20, 9, '1996-07-23', 3);
+INSERT INTO tb_orders VALUES (10264, 24, 6, '1996-07-24', 3);
+INSERT INTO tb_orders VALUES (10265, 7, 2, '1996-07-25', 1);
+INSERT INTO tb_orders VALUES (10266, 87, 3, '1996-07-26', 3);
+INSERT INTO tb_orders VALUES (10267, 25, 4, '1996-07-29', 1);
+INSERT INTO tb_orders VALUES (10268, 33, 8, '1996-07-30', 3);
+INSERT INTO tb_orders VALUES (10269, 89, 5, '1996-07-31', 1);
+INSERT INTO tb_orders VALUES (10270, 87, 1, '1996-08-01', 1);
+INSERT INTO tb_orders VALUES (10271, 75, 6, '1996-08-01', 2);
+INSERT INTO tb_orders VALUES (10272, 65, 6, '1996-08-02', 2);
+INSERT INTO tb_orders VALUES (10273, 63, 3, '1996-08-05', 3);
+INSERT INTO tb_orders VALUES (10274, 85, 6, '1996-08-06', 1);
+INSERT INTO tb_orders VALUES (10275, 49, 1, '1996-08-07', 1);
+INSERT INTO tb_orders VALUES (10276, 80, 8, '1996-08-08', 3);
+INSERT INTO tb_orders VALUES (10277, 52, 2, '1996-08-09', 3);
+INSERT INTO tb_orders VALUES (10278, 5, 8, '1996-08-12', 2);
+INSERT INTO tb_orders VALUES (10279, 44, 8, '1996-08-13', 2);
+INSERT INTO tb_orders VALUES (10280, 5, 2, '1996-08-14', 1);
+INSERT INTO tb_orders VALUES (10281, 69, 4, '1996-08-14', 1);
+INSERT INTO tb_orders VALUES (10282, 69, 4, '1996-08-15', 1);
+INSERT INTO tb_orders VALUES (10283, 46, 3, '1996-08-16', 3);
+INSERT INTO tb_orders VALUES (10284, 44, 4, '1996-08-19', 1);
+INSERT INTO tb_orders VALUES (10285, 63, 1, '1996-08-20', 2);
+INSERT INTO tb_orders VALUES (10286, 63, 8, '1996-08-21', 3);
+INSERT INTO tb_orders VALUES (10287, 67, 8, '1996-08-22', 3);
+INSERT INTO tb_orders VALUES (10288, 66, 4, '1996-08-23', 1);
+INSERT INTO tb_orders VALUES (10289, 11, 7, '1996-08-26', 3);
+INSERT INTO tb_orders VALUES (10290, 15, 8, '1996-08-27', 1);
+INSERT INTO tb_orders VALUES (10291, 61, 6, '1996-08-27', 2);
+INSERT INTO tb_orders VALUES (10292, 81, 1, '1996-08-28', 2);
+INSERT INTO tb_orders VALUES (10293, 80, 1, '1996-08-29', 3);
+INSERT INTO tb_orders VALUES (10294, 65, 4, '1996-08-30', 2);
+INSERT INTO tb_orders VALUES (10295, 85, 2, '1996-09-02', 2);
+INSERT INTO tb_orders VALUES (10296, 46, 6, '1996-09-03', 1);
+INSERT INTO tb_orders VALUES (10297, 7, 5, '1996-09-04', 2);
+INSERT INTO tb_orders VALUES (10298, 37, 6, '1996-09-05', 2);
+INSERT INTO tb_orders VALUES (10299, 67, 4, '1996-09-06', 2);
+INSERT INTO tb_orders VALUES (10300, 49, 2, '1996-09-09', 2);
+INSERT INTO tb_orders VALUES (10301, 86, 8, '1996-09-09', 2);
+INSERT INTO tb_orders VALUES (10302, 76, 4, '1996-09-10', 2);
+INSERT INTO tb_orders VALUES (10303, 30, 7, '1996-09-11', 2);
+INSERT INTO tb_orders VALUES (10304, 80, 1, '1996-09-12', 2);
+INSERT INTO tb_orders VALUES (10305, 55, 8, '1996-09-13', 3);
+INSERT INTO tb_orders VALUES (10306, 69, 1, '1996-09-16', 3);
+INSERT INTO tb_orders VALUES (10307, 48, 2, '1996-09-17', 2);
+INSERT INTO tb_orders VALUES (10308, 2, 7, '1996-09-18', 3);
+INSERT INTO tb_orders VALUES (10309, 37, 3, '1996-09-19', 1);
+INSERT INTO tb_orders VALUES (10310, 77, 8, '1996-09-20', 2);
+INSERT INTO tb_orders VALUES (10311, 18, 1, '1996-09-20', 3);
+INSERT INTO tb_orders VALUES (10312, 86, 2, '1996-09-23', 2);
+INSERT INTO tb_orders VALUES (10313, 63, 2, '1996-09-24', 2);
+INSERT INTO tb_orders VALUES (10314, 65, 1, '1996-09-25', 2);
+INSERT INTO tb_orders VALUES (10315, 38, 4, '1996-09-26', 2);
+INSERT INTO tb_orders VALUES (10316, 65, 1, '1996-09-27', 3);
+INSERT INTO tb_orders VALUES (10317, 48, 6, '1996-09-30', 1);
+INSERT INTO tb_orders VALUES (10318, 38, 8, '1996-10-01', 2);
+INSERT INTO tb_orders VALUES (10319, 80, 7, '1996-10-02', 3);
+INSERT INTO tb_orders VALUES (10320, 87, 5, '1996-10-03', 3);
+INSERT INTO tb_orders VALUES (10321, 38, 3, '1996-10-03', 2);
+INSERT INTO tb_orders VALUES (10322, 58, 7, '1996-10-04', 3);
+INSERT INTO tb_orders VALUES (10323, 39, 4, '1996-10-07', 1);
+INSERT INTO tb_orders VALUES (10324, 71, 9, '1996-10-08', 1);
+INSERT INTO tb_orders VALUES (10325, 39, 1, '1996-10-09', 3);
+INSERT INTO tb_orders VALUES (10326, 8, 4, '1996-10-10', 2);
+INSERT INTO tb_orders VALUES (10327, 24, 2, '1996-10-11', 1);
+INSERT INTO tb_orders VALUES (10328, 28, 4, '1996-10-14', 3);
+INSERT INTO tb_orders VALUES (10329, 75, 4, '1996-10-15', 2);
+INSERT INTO tb_orders VALUES (10330, 46, 3, '1996-10-16', 1);
+INSERT INTO tb_orders VALUES (10331, 9, 9, '1996-10-16', 1);
+INSERT INTO tb_orders VALUES (10332, 51, 3, '1996-10-17', 2);
+INSERT INTO tb_orders VALUES (10333, 87, 5, '1996-10-18', 3);
+INSERT INTO tb_orders VALUES (10334, 84, 8, '1996-10-21', 2);
+INSERT INTO tb_orders VALUES (10335, 37, 7, '1996-10-22', 2);
+INSERT INTO tb_orders VALUES (10336, 60, 7, '1996-10-23', 2);
+INSERT INTO tb_orders VALUES (10337, 25, 4, '1996-10-24', 3);
+INSERT INTO tb_orders VALUES (10338, 55, 4, '1996-10-25', 3);
+INSERT INTO tb_orders VALUES (10339, 51, 2, '1996-10-28', 2);
+INSERT INTO tb_orders VALUES (10340, 9, 1, '1996-10-29', 3);
+INSERT INTO tb_orders VALUES (10341, 73, 7, '1996-10-29', 3);
+INSERT INTO tb_orders VALUES (10342, 25, 4, '1996-10-30', 2);
+INSERT INTO tb_orders VALUES (10343, 44, 4, '1996-10-31', 1);
+INSERT INTO tb_orders VALUES (10344, 89, 4, '1996-11-01', 2);
+INSERT INTO tb_orders VALUES (10345, 63, 2, '1996-11-04', 2);
+INSERT INTO tb_orders VALUES (10346, 65, 3, '1996-11-05', 3);
+INSERT INTO tb_orders VALUES (10347, 21, 4, '1996-11-06', 3);
+INSERT INTO tb_orders VALUES (10348, 86, 4, '1996-11-07', 2);
+INSERT INTO tb_orders VALUES (10349, 75, 7, '1996-11-08', 1);
+INSERT INTO tb_orders VALUES (10350, 41, 6, '1996-11-11', 2);
+INSERT INTO tb_orders VALUES (10351, 20, 1, '1996-11-11', 1);
+INSERT INTO tb_orders VALUES (10352, 28, 3, '1996-11-12', 3);
+INSERT INTO tb_orders VALUES (10353, 59, 7, '1996-11-13', 3);
+INSERT INTO tb_orders VALUES (10354, 58, 8, '1996-11-14', 3);
+INSERT INTO tb_orders VALUES (10355, 4, 6, '1996-11-15', 1);
+INSERT INTO tb_orders VALUES (10356, 86, 6, '1996-11-18', 2);
+INSERT INTO tb_orders VALUES (10357, 46, 1, '1996-11-19', 3);
+INSERT INTO tb_orders VALUES (10358, 41, 5, '1996-11-20', 1);
+INSERT INTO tb_orders VALUES (10359, 72, 5, '1996-11-21', 3);
+INSERT INTO tb_orders VALUES (10360, 7, 4, '1996-11-22', 3);
+INSERT INTO tb_orders VALUES (10361, 63, 1, '1996-11-22', 2);
+INSERT INTO tb_orders VALUES (10362, 9, 3, '1996-11-25', 1);
+INSERT INTO tb_orders VALUES (10363, 17, 4, '1996-11-26', 3);
+INSERT INTO tb_orders VALUES (10364, 19, 1, '1996-11-26', 1);
+INSERT INTO tb_orders VALUES (10365, 3, 3, '1996-11-27', 2);
+INSERT INTO tb_orders VALUES (10366, 29, 8, '1996-11-28', 2);
+INSERT INTO tb_orders VALUES (10367, 83, 7, '1996-11-28', 3);
+INSERT INTO tb_orders VALUES (10368, 20, 2, '1996-11-29', 2);
+INSERT INTO tb_orders VALUES (10369, 75, 8, '1996-12-02', 2);
+INSERT INTO tb_orders VALUES (10370, 14, 6, '1996-12-03', 2);
+INSERT INTO tb_orders VALUES (10371, 41, 1, '1996-12-03', 1);
+INSERT INTO tb_orders VALUES (10372, 62, 5, '1996-12-04', 2);
+INSERT INTO tb_orders VALUES (10373, 37, 4, '1996-12-05', 3);
+INSERT INTO tb_orders VALUES (10374, 91, 1, '1996-12-05', 3);
+INSERT INTO tb_orders VALUES (10375, 36, 3, '1996-12-06', 2);
+INSERT INTO tb_orders VALUES (10376, 51, 1, '1996-12-09', 2);
+INSERT INTO tb_orders VALUES (10377, 72, 1, '1996-12-09', 3);
+INSERT INTO tb_orders VALUES (10378, 24, 5, '1996-12-10', 3);
+INSERT INTO tb_orders VALUES (10379, 61, 2, '1996-12-11', 1);
+INSERT INTO tb_orders VALUES (10380, 37, 8, '1996-12-12', 3);
+INSERT INTO tb_orders VALUES (10381, 46, 3, '1996-12-12', 3);
+INSERT INTO tb_orders VALUES (10382, 20, 4, '1996-12-13', 1);
+INSERT INTO tb_orders VALUES (10383, 4, 8, '1996-12-16', 3);
+INSERT INTO tb_orders VALUES (10384, 5, 3, '1996-12-16', 3);
+INSERT INTO tb_orders VALUES (10385, 75, 1, '1996-12-17', 2);
+INSERT INTO tb_orders VALUES (10386, 21, 9, '1996-12-18', 3);
+INSERT INTO tb_orders VALUES (10387, 70, 1, '1996-12-18', 2);
+INSERT INTO tb_orders VALUES (10388, 72, 2, '1996-12-19', 1);
+INSERT INTO tb_orders VALUES (10389, 10, 4, '1996-12-20', 2);
+INSERT INTO tb_orders VALUES (10390, 20, 6, '1996-12-23', 1);
+INSERT INTO tb_orders VALUES (10391, 17, 3, '1996-12-23', 3);
+INSERT INTO tb_orders VALUES (10392, 59, 2, '1996-12-24', 3);
+INSERT INTO tb_orders VALUES (10393, 71, 1, '1996-12-25', 3);
+INSERT INTO tb_orders VALUES (10394, 36, 1, '1996-12-25', 3);
+INSERT INTO tb_orders VALUES (10395, 35, 6, '1996-12-26', 1);
+INSERT INTO tb_orders VALUES (10396, 25, 1, '1996-12-27', 3);
+INSERT INTO tb_orders VALUES (10397, 60, 5, '1996-12-27', 1);
+INSERT INTO tb_orders VALUES (10398, 71, 2, '1996-12-30', 3);
+INSERT INTO tb_orders VALUES (10399, 83, 8, '1996-12-31', 3);
+INSERT INTO tb_orders VALUES (10400, 19, 1, '1997-01-01', 3);
+INSERT INTO tb_orders VALUES (10401, 65, 1, '1997-01-01', 1);
+INSERT INTO tb_orders VALUES (10402, 20, 8, '1997-01-02', 2);
+INSERT INTO tb_orders VALUES (10403, 20, 4, '1997-01-03', 3);
+INSERT INTO tb_orders VALUES (10404, 49, 2, '1997-01-03', 1);
+INSERT INTO tb_orders VALUES (10405, 47, 1, '1997-01-06', 1);
+INSERT INTO tb_orders VALUES (10406, 62, 7, '1997-01-07', 1);
+INSERT INTO tb_orders VALUES (10407, 56, 2, '1997-01-07', 2);
+INSERT INTO tb_orders VALUES (10408, 23, 8, '1997-01-08', 1);
+INSERT INTO tb_orders VALUES (10409, 54, 3, '1997-01-09', 1);
+INSERT INTO tb_orders VALUES (10410, 10, 3, '1997-01-10', 3);
+INSERT INTO tb_orders VALUES (10411, 10, 9, '1997-01-10', 3);
+INSERT INTO tb_orders VALUES (10412, 87, 8, '1997-01-13', 2);
+INSERT INTO tb_orders VALUES (10413, 41, 3, '1997-01-14', 2);
+INSERT INTO tb_orders VALUES (10414, 21, 2, '1997-01-14', 3);
+INSERT INTO tb_orders VALUES (10415, 36, 3, '1997-01-15', 1);
+INSERT INTO tb_orders VALUES (10416, 87, 8, '1997-01-16', 3);
+INSERT INTO tb_orders VALUES (10417, 73, 4, '1997-01-16', 3);
+INSERT INTO tb_orders VALUES (10418, 63, 4, '1997-01-17', 1);
+INSERT INTO tb_orders VALUES (10419, 68, 4, '1997-01-20', 2);
+INSERT INTO tb_orders VALUES (10420, 88, 3, '1997-01-21', 1);
+INSERT INTO tb_orders VALUES (10421, 61, 8, '1997-01-21', 1);
+INSERT INTO tb_orders VALUES (10422, 27, 2, '1997-01-22', 1);
+INSERT INTO tb_orders VALUES (10423, 31, 6, '1997-01-23', 3);
+INSERT INTO tb_orders VALUES (10424, 51, 7, '1997-01-23', 2);
+INSERT INTO tb_orders VALUES (10425, 41, 6, '1997-01-24', 2);
+INSERT INTO tb_orders VALUES (10426, 29, 4, '1997-01-27', 1);
+INSERT INTO tb_orders VALUES (10427, 59, 4, '1997-01-27', 2);
+INSERT INTO tb_orders VALUES (10428, 66, 7, '1997-01-28', 1);
+INSERT INTO tb_orders VALUES (10429, 37, 3, '1997-01-29', 2);
+INSERT INTO tb_orders VALUES (10430, 20, 4, '1997-01-30', 1);
+INSERT INTO tb_orders VALUES (10431, 10, 4, '1997-01-30', 2);
+INSERT INTO tb_orders VALUES (10432, 75, 3, '1997-01-31', 2);
+INSERT INTO tb_orders VALUES (10433, 60, 3, '1997-02-03', 3);
+INSERT INTO tb_orders VALUES (10434, 24, 3, '1997-02-03', 2);
+INSERT INTO tb_orders VALUES (10435, 16, 8, '1997-02-04', 2);
+INSERT INTO tb_orders VALUES (10436, 7, 3, '1997-02-05', 2);
+INSERT INTO tb_orders VALUES (10437, 87, 8, '1997-02-05', 1);
+INSERT INTO tb_orders VALUES (10438, 79, 3, '1997-02-06', 2);
+INSERT INTO tb_orders VALUES (10439, 51, 6, '1997-02-07', 3);
+INSERT INTO tb_orders VALUES (10440, 71, 4, '1997-02-10', 2);
+INSERT INTO tb_orders VALUES (10441, 55, 3, '1997-02-10', 2);
+INSERT INTO tb_orders VALUES (10442, 20, 3, '1997-02-11', 2);
+INSERT INTO tb_orders VALUES (10443, 66, 8, '1997-02-12', 1);
+
 
 
 -- tb_orders_details
@@ -529,3 +527,522 @@ CREATE TABLE tb_orders_details (
     FOREIGN KEY (order_id) REFERENCES tb_orders(order_id),
     FOREIGN KEY (product_id) REFERENCES tb_products(product_id)
 );
+
+INSERT INTO tb_orders_details VALUES (1, 10248, 11, 12);
+INSERT INTO tb_orders_details VALUES (2, 10248, 42, 10);
+INSERT INTO tb_orders_details VALUES (3, 10248, 72, 5);
+INSERT INTO tb_orders_details VALUES (4, 10249, 14, 9);
+INSERT INTO tb_orders_details VALUES (5, 10249, 51, 40);
+INSERT INTO tb_orders_details VALUES (6, 10250, 41, 10);
+INSERT INTO tb_orders_details VALUES (7, 10250, 51, 35);
+INSERT INTO tb_orders_details VALUES (8, 10250, 65, 15);
+INSERT INTO tb_orders_details VALUES (9, 10251, 22, 6);
+INSERT INTO tb_orders_details VALUES (10, 10251, 57, 15);
+INSERT INTO tb_orders_details VALUES (11, 10251, 65, 20);
+INSERT INTO tb_orders_details VALUES (12, 10252, 20, 40);
+INSERT INTO tb_orders_details VALUES (13, 10252, 33, 25);
+INSERT INTO tb_orders_details VALUES (14, 10252, 60, 40);
+INSERT INTO tb_orders_details VALUES (15, 10253, 31, 20);
+INSERT INTO tb_orders_details VALUES (16, 10253, 39, 42);
+INSERT INTO tb_orders_details VALUES (17, 10253, 49, 40);
+INSERT INTO tb_orders_details VALUES (18, 10254, 24, 15);
+INSERT INTO tb_orders_details VALUES (19, 10254, 55, 21);
+INSERT INTO tb_orders_details VALUES (20, 10254, 74, 21);
+INSERT INTO tb_orders_details VALUES (21, 10255, 2, 20);
+INSERT INTO tb_orders_details VALUES (22, 10255, 16, 35);
+INSERT INTO tb_orders_details VALUES (23, 10255, 36, 25);
+INSERT INTO tb_orders_details VALUES (24, 10255, 59, 30);
+INSERT INTO tb_orders_details VALUES (25, 10256, 53, 15);
+INSERT INTO tb_orders_details VALUES (26, 10256, 77, 12);
+INSERT INTO tb_orders_details VALUES (27, 10257, 27, 25);
+INSERT INTO tb_orders_details VALUES (28, 10257, 39, 6);
+INSERT INTO tb_orders_details VALUES (29, 10257, 77, 15);
+INSERT INTO tb_orders_details VALUES (30, 10258, 2, 50);
+INSERT INTO tb_orders_details VALUES (31, 10258, 5, 65);
+INSERT INTO tb_orders_details VALUES (32, 10258, 32, 6);
+INSERT INTO tb_orders_details VALUES (33, 10259, 21, 10);
+INSERT INTO tb_orders_details VALUES (34, 10259, 37, 1);
+INSERT INTO tb_orders_details VALUES (35, 10260, 41, 16);
+INSERT INTO tb_orders_details VALUES (36, 10260, 57, 50);
+INSERT INTO tb_orders_details VALUES (37, 10260, 62, 15);
+INSERT INTO tb_orders_details VALUES (38, 10260, 70, 21);
+INSERT INTO tb_orders_details VALUES (39, 10261, 21, 20);
+INSERT INTO tb_orders_details VALUES (40, 10261, 35, 20);
+INSERT INTO tb_orders_details VALUES (41, 10262, 5, 12);
+INSERT INTO tb_orders_details VALUES (42, 10262, 7, 15);
+INSERT INTO tb_orders_details VALUES (43, 10262, 56, 2);
+INSERT INTO tb_orders_details VALUES (44, 10263, 16, 60);
+INSERT INTO tb_orders_details VALUES (45, 10263, 24, 28);
+INSERT INTO tb_orders_details VALUES (46, 10263, 30, 60);
+INSERT INTO tb_orders_details VALUES (47, 10263, 74, 36);
+INSERT INTO tb_orders_details VALUES (48, 10264, 2, 35);
+INSERT INTO tb_orders_details VALUES (49, 10264, 41, 25);
+INSERT INTO tb_orders_details VALUES (50, 10265, 17, 30);
+INSERT INTO tb_orders_details VALUES (51, 10265, 70, 20);
+INSERT INTO tb_orders_details VALUES (52, 10266, 12, 12);
+INSERT INTO tb_orders_details VALUES (53, 10267, 40, 50);
+INSERT INTO tb_orders_details VALUES (54, 10267, 59, 70);
+INSERT INTO tb_orders_details VALUES (55, 10267, 76, 15);
+INSERT INTO tb_orders_details VALUES (56, 10268, 29, 10);
+INSERT INTO tb_orders_details VALUES (57, 10268, 72, 4);
+INSERT INTO tb_orders_details VALUES (58, 10269, 33, 60);
+INSERT INTO tb_orders_details VALUES (59, 10269, 72, 20);
+INSERT INTO tb_orders_details VALUES (60, 10270, 36, 30);
+INSERT INTO tb_orders_details VALUES (61, 10270, 43, 25);
+INSERT INTO tb_orders_details VALUES (62, 10271, 33, 24);
+INSERT INTO tb_orders_details VALUES (63, 10272, 20, 6);
+INSERT INTO tb_orders_details VALUES (64, 10272, 31, 40);
+INSERT INTO tb_orders_details VALUES (65, 10272, 72, 24);
+INSERT INTO tb_orders_details VALUES (66, 10273, 10, 24);
+INSERT INTO tb_orders_details VALUES (67, 10273, 31, 15);
+INSERT INTO tb_orders_details VALUES (68, 10273, 33, 20);
+INSERT INTO tb_orders_details VALUES (69, 10273, 40, 60);
+INSERT INTO tb_orders_details VALUES (70, 10273, 76, 33);
+INSERT INTO tb_orders_details VALUES (71, 10274, 71, 20);
+INSERT INTO tb_orders_details VALUES (72, 10274, 72, 7);
+INSERT INTO tb_orders_details VALUES (73, 10275, 24, 12);
+INSERT INTO tb_orders_details VALUES (74, 10275, 59, 6);
+INSERT INTO tb_orders_details VALUES (75, 10276, 10, 15);
+INSERT INTO tb_orders_details VALUES (76, 10276, 13, 10);
+INSERT INTO tb_orders_details VALUES (77, 10277, 28, 20);
+INSERT INTO tb_orders_details VALUES (78, 10277, 62, 12);
+INSERT INTO tb_orders_details VALUES (79, 10278, 44, 16);
+INSERT INTO tb_orders_details VALUES (80, 10278, 59, 15);
+INSERT INTO tb_orders_details VALUES (81, 10278, 63, 8);
+INSERT INTO tb_orders_details VALUES (82, 10278, 73, 25);
+INSERT INTO tb_orders_details VALUES (83, 10279, 17, 15);
+INSERT INTO tb_orders_details VALUES (84, 10280, 24, 12);
+INSERT INTO tb_orders_details VALUES (85, 10280, 55, 20);
+INSERT INTO tb_orders_details VALUES (86, 10280, 75, 30);
+INSERT INTO tb_orders_details VALUES (87, 10281, 19, 1);
+INSERT INTO tb_orders_details VALUES (88, 10281, 24, 6);
+INSERT INTO tb_orders_details VALUES (89, 10281, 35, 4);
+INSERT INTO tb_orders_details VALUES (90, 10282, 30, 6);
+INSERT INTO tb_orders_details VALUES (91, 10282, 57, 2);
+INSERT INTO tb_orders_details VALUES (92, 10283, 15, 20);
+INSERT INTO tb_orders_details VALUES (93, 10283, 19, 18);
+INSERT INTO tb_orders_details VALUES (94, 10283, 60, 35);
+INSERT INTO tb_orders_details VALUES (95, 10283, 72, 3);
+INSERT INTO tb_orders_details VALUES (96, 10284, 27, 15);
+INSERT INTO tb_orders_details VALUES (97, 10284, 44, 21);
+INSERT INTO tb_orders_details VALUES (98, 10284, 60, 20);
+INSERT INTO tb_orders_details VALUES (99, 10284, 67, 5);
+INSERT INTO tb_orders_details VALUES (100, 10285, 1, 45);
+INSERT INTO tb_orders_details VALUES (101, 10285, 40, 40);
+INSERT INTO tb_orders_details VALUES (102, 10285, 53, 36);
+INSERT INTO tb_orders_details VALUES (103, 10286, 35, 100);
+INSERT INTO tb_orders_details VALUES (104, 10286, 62, 40);
+INSERT INTO tb_orders_details VALUES (105, 10287, 16, 40);
+INSERT INTO tb_orders_details VALUES (106, 10287, 34, 20);
+INSERT INTO tb_orders_details VALUES (107, 10287, 46, 15);
+INSERT INTO tb_orders_details VALUES (108, 10288, 54, 10);
+INSERT INTO tb_orders_details VALUES (109, 10288, 68, 3);
+INSERT INTO tb_orders_details VALUES (110, 10289, 3, 30);
+INSERT INTO tb_orders_details VALUES (111, 10289, 64, 9);
+INSERT INTO tb_orders_details VALUES (112, 10290, 5, 20);
+INSERT INTO tb_orders_details VALUES (113, 10290, 29, 15);
+INSERT INTO tb_orders_details VALUES (114, 10290, 49, 15);
+INSERT INTO tb_orders_details VALUES (115, 10290, 77, 10);
+INSERT INTO tb_orders_details VALUES (116, 10291, 13, 20);
+INSERT INTO tb_orders_details VALUES (117, 10291, 44, 24);
+INSERT INTO tb_orders_details VALUES (118, 10291, 51, 2);
+INSERT INTO tb_orders_details VALUES (119, 10292, 20, 20);
+INSERT INTO tb_orders_details VALUES (120, 10293, 18, 12);
+INSERT INTO tb_orders_details VALUES (121, 10293, 24, 10);
+INSERT INTO tb_orders_details VALUES (122, 10293, 63, 5);
+INSERT INTO tb_orders_details VALUES (123, 10293, 75, 6);
+INSERT INTO tb_orders_details VALUES (124, 10294, 1, 18);
+INSERT INTO tb_orders_details VALUES (125, 10294, 17, 15);
+INSERT INTO tb_orders_details VALUES (126, 10294, 43, 15);
+INSERT INTO tb_orders_details VALUES (127, 10294, 60, 21);
+INSERT INTO tb_orders_details VALUES (128, 10294, 75, 6);
+INSERT INTO tb_orders_details VALUES (129, 10295, 56, 4);
+INSERT INTO tb_orders_details VALUES (130, 10296, 11, 12);
+INSERT INTO tb_orders_details VALUES (131, 10296, 16, 30);
+INSERT INTO tb_orders_details VALUES (132, 10296, 69, 15);
+INSERT INTO tb_orders_details VALUES (133, 10297, 39, 60);
+INSERT INTO tb_orders_details VALUES (134, 10297, 72, 20);
+INSERT INTO tb_orders_details VALUES (135, 10298, 2, 40);
+INSERT INTO tb_orders_details VALUES (136, 10298, 36, 40);
+INSERT INTO tb_orders_details VALUES (137, 10298, 59, 30);
+INSERT INTO tb_orders_details VALUES (138, 10298, 62, 15);
+INSERT INTO tb_orders_details VALUES (139, 10299, 19, 15);
+INSERT INTO tb_orders_details VALUES (140, 10299, 70, 20);
+INSERT INTO tb_orders_details VALUES (141, 10300, 66, 30);
+INSERT INTO tb_orders_details VALUES (142, 10300, 68, 20);
+INSERT INTO tb_orders_details VALUES (143, 10301, 40, 10);
+INSERT INTO tb_orders_details VALUES (144, 10301, 56, 20);
+INSERT INTO tb_orders_details VALUES (145, 10302, 17, 40);
+INSERT INTO tb_orders_details VALUES (146, 10302, 28, 28);
+INSERT INTO tb_orders_details VALUES (147, 10302, 43, 12);
+INSERT INTO tb_orders_details VALUES (148, 10303, 40, 40);
+INSERT INTO tb_orders_details VALUES (149, 10303, 65, 30);
+INSERT INTO tb_orders_details VALUES (150, 10303, 68, 15);
+INSERT INTO tb_orders_details VALUES (151, 10304, 49, 30);
+INSERT INTO tb_orders_details VALUES (152, 10304, 59, 10);
+INSERT INTO tb_orders_details VALUES (153, 10304, 71, 2);
+INSERT INTO tb_orders_details VALUES (154, 10305, 18, 25);
+INSERT INTO tb_orders_details VALUES (155, 10305, 29, 25);
+INSERT INTO tb_orders_details VALUES (156, 10305, 39, 30);
+INSERT INTO tb_orders_details VALUES (157, 10306, 30, 10);
+INSERT INTO tb_orders_details VALUES (158, 10306, 53, 10);
+INSERT INTO tb_orders_details VALUES (159, 10306, 54, 5);
+INSERT INTO tb_orders_details VALUES (160, 10307, 62, 10);
+INSERT INTO tb_orders_details VALUES (161, 10307, 68, 3);
+INSERT INTO tb_orders_details VALUES (162, 10308, 69, 1);
+INSERT INTO tb_orders_details VALUES (163, 10308, 70, 5);
+INSERT INTO tb_orders_details VALUES (164, 10309, 4, 20);
+INSERT INTO tb_orders_details VALUES (165, 10309, 6, 30);
+INSERT INTO tb_orders_details VALUES (166, 10309, 42, 2);
+INSERT INTO tb_orders_details VALUES (167, 10309, 43, 20);
+INSERT INTO tb_orders_details VALUES (168, 10309, 71, 3);
+INSERT INTO tb_orders_details VALUES (169, 10310, 16, 10);
+INSERT INTO tb_orders_details VALUES (170, 10310, 62, 5);
+INSERT INTO tb_orders_details VALUES (171, 10311, 42, 6);
+INSERT INTO tb_orders_details VALUES (172, 10311, 69, 7);
+INSERT INTO tb_orders_details VALUES (173, 10312, 28, 4);
+INSERT INTO tb_orders_details VALUES (174, 10312, 43, 24);
+INSERT INTO tb_orders_details VALUES (175, 10312, 53, 20);
+INSERT INTO tb_orders_details VALUES (176, 10312, 75, 10);
+INSERT INTO tb_orders_details VALUES (177, 10313, 36, 12);
+INSERT INTO tb_orders_details VALUES (178, 10314, 32, 40);
+INSERT INTO tb_orders_details VALUES (179, 10314, 58, 30);
+INSERT INTO tb_orders_details VALUES (180, 10314, 62, 25);
+INSERT INTO tb_orders_details VALUES (181, 10315, 34, 14);
+INSERT INTO tb_orders_details VALUES (182, 10315, 70, 30);
+INSERT INTO tb_orders_details VALUES (183, 10316, 41, 10);
+INSERT INTO tb_orders_details VALUES (184, 10316, 62, 70);
+INSERT INTO tb_orders_details VALUES (185, 10317, 1, 20);
+INSERT INTO tb_orders_details VALUES (186, 10318, 41, 20);
+INSERT INTO tb_orders_details VALUES (187, 10318, 76, 6);
+INSERT INTO tb_orders_details VALUES (188, 10319, 17, 8);
+INSERT INTO tb_orders_details VALUES (189, 10319, 28, 14);
+INSERT INTO tb_orders_details VALUES (190, 10319, 76, 30);
+INSERT INTO tb_orders_details VALUES (191, 10320, 71, 30);
+INSERT INTO tb_orders_details VALUES (192, 10321, 35, 10);
+INSERT INTO tb_orders_details VALUES (193, 10322, 52, 20);
+INSERT INTO tb_orders_details VALUES (194, 10323, 15, 5);
+INSERT INTO tb_orders_details VALUES (195, 10323, 25, 4);
+INSERT INTO tb_orders_details VALUES (196, 10323, 39, 4);
+INSERT INTO tb_orders_details VALUES (197, 10324, 16, 21);
+INSERT INTO tb_orders_details VALUES (198, 10324, 35, 70);
+INSERT INTO tb_orders_details VALUES (199, 10324, 46, 30);
+INSERT INTO tb_orders_details VALUES (200, 10324, 59, 40);
+INSERT INTO tb_orders_details VALUES (201, 10324, 63, 80);
+INSERT INTO tb_orders_details VALUES (202, 10325, 6, 6);
+INSERT INTO tb_orders_details VALUES (203, 10325, 13, 12);
+INSERT INTO tb_orders_details VALUES (204, 10325, 14, 9);
+INSERT INTO tb_orders_details VALUES (205, 10325, 31, 4);
+INSERT INTO tb_orders_details VALUES (206, 10325, 72, 40);
+INSERT INTO tb_orders_details VALUES (207, 10326, 4, 24);
+INSERT INTO tb_orders_details VALUES (208, 10326, 57, 16);
+INSERT INTO tb_orders_details VALUES (209, 10326, 75, 50);
+INSERT INTO tb_orders_details VALUES (210, 10327, 2, 25);
+INSERT INTO tb_orders_details VALUES (211, 10327, 11, 50);
+INSERT INTO tb_orders_details VALUES (212, 10327, 30, 35);
+INSERT INTO tb_orders_details VALUES (213, 10327, 58, 30);
+INSERT INTO tb_orders_details VALUES (214, 10328, 59, 9);
+INSERT INTO tb_orders_details VALUES (215, 10328, 65, 40);
+INSERT INTO tb_orders_details VALUES (216, 10328, 68, 10);
+INSERT INTO tb_orders_details VALUES (217, 10329, 19, 10);
+INSERT INTO tb_orders_details VALUES (218, 10329, 30, 8);
+INSERT INTO tb_orders_details VALUES (219, 10329, 38, 20);
+INSERT INTO tb_orders_details VALUES (220, 10329, 56, 12);
+INSERT INTO tb_orders_details VALUES (221, 10330, 26, 50);
+INSERT INTO tb_orders_details VALUES (222, 10330, 72, 25);
+INSERT INTO tb_orders_details VALUES (223, 10331, 54, 15);
+INSERT INTO tb_orders_details VALUES (224, 10332, 18, 40);
+INSERT INTO tb_orders_details VALUES (225, 10332, 42, 10);
+INSERT INTO tb_orders_details VALUES (226, 10332, 47, 16);
+INSERT INTO tb_orders_details VALUES (227, 10333, 14, 10);
+INSERT INTO tb_orders_details VALUES (228, 10333, 21, 10);
+INSERT INTO tb_orders_details VALUES (229, 10333, 71, 40);
+INSERT INTO tb_orders_details VALUES (230, 10334, 52, 8);
+INSERT INTO tb_orders_details VALUES (231, 10334, 68, 10);
+INSERT INTO tb_orders_details VALUES (232, 10335, 2, 7);
+INSERT INTO tb_orders_details VALUES (233, 10335, 31, 25);
+INSERT INTO tb_orders_details VALUES (234, 10335, 32, 6);
+INSERT INTO tb_orders_details VALUES (235, 10335, 51, 48);
+INSERT INTO tb_orders_details VALUES (236, 10336, 4, 18);
+INSERT INTO tb_orders_details VALUES (237, 10337, 23, 40);
+INSERT INTO tb_orders_details VALUES (238, 10337, 26, 24);
+INSERT INTO tb_orders_details VALUES (239, 10337, 36, 20);
+INSERT INTO tb_orders_details VALUES (240, 10337, 37, 28);
+INSERT INTO tb_orders_details VALUES (241, 10337, 72, 25);
+INSERT INTO tb_orders_details VALUES (242, 10338, 17, 20);
+INSERT INTO tb_orders_details VALUES (243, 10338, 30, 15);
+INSERT INTO tb_orders_details VALUES (244, 10339, 4, 10);
+INSERT INTO tb_orders_details VALUES (245, 10339, 17, 70);
+INSERT INTO tb_orders_details VALUES (246, 10339, 62, 28);
+INSERT INTO tb_orders_details VALUES (247, 10340, 18, 20);
+INSERT INTO tb_orders_details VALUES (248, 10340, 41, 12);
+INSERT INTO tb_orders_details VALUES (249, 10340, 43, 40);
+INSERT INTO tb_orders_details VALUES (250, 10341, 33, 8);
+INSERT INTO tb_orders_details VALUES (251, 10341, 59, 9);
+INSERT INTO tb_orders_details VALUES (252, 10342, 2, 24);
+INSERT INTO tb_orders_details VALUES (253, 10342, 31, 56);
+INSERT INTO tb_orders_details VALUES (254, 10342, 36, 40);
+INSERT INTO tb_orders_details VALUES (255, 10342, 55, 40);
+INSERT INTO tb_orders_details VALUES (256, 10343, 64, 50);
+INSERT INTO tb_orders_details VALUES (257, 10343, 68, 4);
+INSERT INTO tb_orders_details VALUES (258, 10343, 76, 15);
+INSERT INTO tb_orders_details VALUES (259, 10344, 4, 35);
+INSERT INTO tb_orders_details VALUES (260, 10344, 8, 70);
+INSERT INTO tb_orders_details VALUES (261, 10345, 8, 70);
+INSERT INTO tb_orders_details VALUES (262, 10345, 19, 80);
+INSERT INTO tb_orders_details VALUES (263, 10345, 42, 9);
+INSERT INTO tb_orders_details VALUES (264, 10346, 17, 36);
+INSERT INTO tb_orders_details VALUES (265, 10346, 56, 20);
+INSERT INTO tb_orders_details VALUES (266, 10347, 25, 10);
+INSERT INTO tb_orders_details VALUES (267, 10347, 39, 50);
+INSERT INTO tb_orders_details VALUES (268, 10347, 40, 4);
+INSERT INTO tb_orders_details VALUES (269, 10347, 75, 6);
+INSERT INTO tb_orders_details VALUES (270, 10348, 1, 15);
+INSERT INTO tb_orders_details VALUES (271, 10348, 23, 25);
+INSERT INTO tb_orders_details VALUES (272, 10349, 54, 24);
+INSERT INTO tb_orders_details VALUES (273, 10350, 50, 15);
+INSERT INTO tb_orders_details VALUES (274, 10350, 69, 18);
+INSERT INTO tb_orders_details VALUES (275, 10351, 38, 20);
+INSERT INTO tb_orders_details VALUES (276, 10351, 41, 13);
+INSERT INTO tb_orders_details VALUES (277, 10351, 44, 77);
+INSERT INTO tb_orders_details VALUES (278, 10351, 65, 10);
+INSERT INTO tb_orders_details VALUES (279, 10352, 24, 10);
+INSERT INTO tb_orders_details VALUES (280, 10352, 54, 20);
+INSERT INTO tb_orders_details VALUES (281, 10353, 11, 12);
+INSERT INTO tb_orders_details VALUES (282, 10353, 38, 50);
+INSERT INTO tb_orders_details VALUES (283, 10354, 1, 12);
+INSERT INTO tb_orders_details VALUES (284, 10354, 29, 4);
+INSERT INTO tb_orders_details VALUES (285, 10355, 24, 25);
+INSERT INTO tb_orders_details VALUES (286, 10355, 57, 25);
+INSERT INTO tb_orders_details VALUES (287, 10356, 31, 30);
+INSERT INTO tb_orders_details VALUES (288, 10356, 55, 12);
+INSERT INTO tb_orders_details VALUES (289, 10356, 69, 20);
+INSERT INTO tb_orders_details VALUES (290, 10357, 10, 30);
+INSERT INTO tb_orders_details VALUES (291, 10357, 26, 16);
+INSERT INTO tb_orders_details VALUES (292, 10357, 60, 8);
+INSERT INTO tb_orders_details VALUES (293, 10358, 24, 10);
+INSERT INTO tb_orders_details VALUES (294, 10358, 34, 10);
+INSERT INTO tb_orders_details VALUES (295, 10358, 36, 20);
+INSERT INTO tb_orders_details VALUES (296, 10359, 16, 56);
+INSERT INTO tb_orders_details VALUES (297, 10359, 31, 70);
+INSERT INTO tb_orders_details VALUES (298, 10359, 60, 80);
+INSERT INTO tb_orders_details VALUES (299, 10360, 28, 30);
+INSERT INTO tb_orders_details VALUES (300, 10360, 29, 35);
+INSERT INTO tb_orders_details VALUES (301, 10360, 38, 10);
+INSERT INTO tb_orders_details VALUES (302, 10360, 49, 35);
+INSERT INTO tb_orders_details VALUES (303, 10360, 54, 28);
+INSERT INTO tb_orders_details VALUES (304, 10361, 39, 54);
+INSERT INTO tb_orders_details VALUES (305, 10361, 60, 55);
+INSERT INTO tb_orders_details VALUES (306, 10362, 25, 50);
+INSERT INTO tb_orders_details VALUES (307, 10362, 51, 20);
+INSERT INTO tb_orders_details VALUES (308, 10362, 54, 24);
+INSERT INTO tb_orders_details VALUES (309, 10363, 31, 20);
+INSERT INTO tb_orders_details VALUES (310, 10363, 75, 12);
+INSERT INTO tb_orders_details VALUES (311, 10363, 76, 12);
+INSERT INTO tb_orders_details VALUES (312, 10364, 69, 30);
+INSERT INTO tb_orders_details VALUES (313, 10364, 71, 5);
+INSERT INTO tb_orders_details VALUES (314, 10365, 11, 24);
+INSERT INTO tb_orders_details VALUES (315, 10366, 65, 5);
+INSERT INTO tb_orders_details VALUES (316, 10366, 77, 5);
+INSERT INTO tb_orders_details VALUES (317, 10367, 34, 36);
+INSERT INTO tb_orders_details VALUES (318, 10367, 54, 18);
+INSERT INTO tb_orders_details VALUES (319, 10367, 65, 15);
+INSERT INTO tb_orders_details VALUES (320, 10367, 77, 7);
+INSERT INTO tb_orders_details VALUES (321, 10368, 21, 5);
+INSERT INTO tb_orders_details VALUES (322, 10368, 28, 13);
+INSERT INTO tb_orders_details VALUES (323, 10368, 57, 25);
+INSERT INTO tb_orders_details VALUES (324, 10368, 64, 35);
+INSERT INTO tb_orders_details VALUES (325, 10369, 29, 20);
+INSERT INTO tb_orders_details VALUES (326, 10369, 56, 18);
+INSERT INTO tb_orders_details VALUES (327, 10370, 1, 15);
+INSERT INTO tb_orders_details VALUES (328, 10370, 64, 30);
+INSERT INTO tb_orders_details VALUES (329, 10370, 74, 20);
+INSERT INTO tb_orders_details VALUES (330, 10371, 36, 6);
+INSERT INTO tb_orders_details VALUES (331, 10372, 20, 12);
+INSERT INTO tb_orders_details VALUES (332, 10372, 38, 40);
+INSERT INTO tb_orders_details VALUES (333, 10372, 60, 70);
+INSERT INTO tb_orders_details VALUES (334, 10372, 72, 42);
+INSERT INTO tb_orders_details VALUES (335, 10373, 58, 80);
+INSERT INTO tb_orders_details VALUES (336, 10373, 71, 50);
+INSERT INTO tb_orders_details VALUES (337, 10374, 31, 30);
+INSERT INTO tb_orders_details VALUES (338, 10374, 58, 15);
+INSERT INTO tb_orders_details VALUES (339, 10375, 14, 15);
+INSERT INTO tb_orders_details VALUES (340, 10375, 54, 10);
+INSERT INTO tb_orders_details VALUES (341, 10376, 31, 42);
+INSERT INTO tb_orders_details VALUES (342, 10377, 28, 20);
+INSERT INTO tb_orders_details VALUES (343, 10377, 39, 20);
+INSERT INTO tb_orders_details VALUES (344, 10378, 71, 6);
+INSERT INTO tb_orders_details VALUES (345, 10379, 41, 8);
+INSERT INTO tb_orders_details VALUES (346, 10379, 63, 16);
+INSERT INTO tb_orders_details VALUES (347, 10379, 65, 20);
+INSERT INTO tb_orders_details VALUES (348, 10380, 30, 18);
+INSERT INTO tb_orders_details VALUES (349, 10380, 53, 20);
+INSERT INTO tb_orders_details VALUES (350, 10380, 60, 6);
+INSERT INTO tb_orders_details VALUES (351, 10380, 70, 30);
+INSERT INTO tb_orders_details VALUES (352, 10381, 74, 14);
+INSERT INTO tb_orders_details VALUES (353, 10382, 5, 32);
+INSERT INTO tb_orders_details VALUES (354, 10382, 18, 9);
+INSERT INTO tb_orders_details VALUES (355, 10382, 29, 14);
+INSERT INTO tb_orders_details VALUES (356, 10382, 33, 60);
+INSERT INTO tb_orders_details VALUES (357, 10382, 74, 50);
+INSERT INTO tb_orders_details VALUES (358, 10383, 13, 20);
+INSERT INTO tb_orders_details VALUES (359, 10383, 50, 15);
+INSERT INTO tb_orders_details VALUES (360, 10383, 56, 20);
+INSERT INTO tb_orders_details VALUES (361, 10384, 20, 28);
+INSERT INTO tb_orders_details VALUES (362, 10384, 60, 15);
+INSERT INTO tb_orders_details VALUES (363, 10385, 7, 10);
+INSERT INTO tb_orders_details VALUES (364, 10385, 60, 20);
+INSERT INTO tb_orders_details VALUES (365, 10385, 68, 8);
+INSERT INTO tb_orders_details VALUES (366, 10386, 24, 15);
+INSERT INTO tb_orders_details VALUES (367, 10386, 34, 10);
+INSERT INTO tb_orders_details VALUES (368, 10387, 24, 15);
+INSERT INTO tb_orders_details VALUES (369, 10387, 28, 6);
+INSERT INTO tb_orders_details VALUES (370, 10387, 59, 12);
+INSERT INTO tb_orders_details VALUES (371, 10387, 71, 15);
+INSERT INTO tb_orders_details VALUES (372, 10388, 45, 15);
+INSERT INTO tb_orders_details VALUES (373, 10388, 52, 20);
+INSERT INTO tb_orders_details VALUES (374, 10388, 53, 40);
+INSERT INTO tb_orders_details VALUES (375, 10389, 10, 16);
+INSERT INTO tb_orders_details VALUES (376, 10389, 55, 15);
+INSERT INTO tb_orders_details VALUES (377, 10389, 62, 20);
+INSERT INTO tb_orders_details VALUES (378, 10389, 70, 30);
+INSERT INTO tb_orders_details VALUES (379, 10390, 31, 60);
+INSERT INTO tb_orders_details VALUES (380, 10390, 35, 40);
+INSERT INTO tb_orders_details VALUES (381, 10390, 46, 45);
+INSERT INTO tb_orders_details VALUES (382, 10390, 72, 24);
+INSERT INTO tb_orders_details VALUES (383, 10391, 13, 18);
+INSERT INTO tb_orders_details VALUES (384, 10392, 69, 50);
+INSERT INTO tb_orders_details VALUES (385, 10393, 2, 25);
+INSERT INTO tb_orders_details VALUES (386, 10393, 14, 42);
+INSERT INTO tb_orders_details VALUES (387, 10393, 25, 7);
+INSERT INTO tb_orders_details VALUES (388, 10393, 26, 70);
+INSERT INTO tb_orders_details VALUES (389, 10393, 31, 32);
+INSERT INTO tb_orders_details VALUES (390, 10394, 13, 10);
+INSERT INTO tb_orders_details VALUES (391, 10394, 62, 10);
+INSERT INTO tb_orders_details VALUES (392, 10395, 46, 28);
+INSERT INTO tb_orders_details VALUES (393, 10395, 53, 70);
+INSERT INTO tb_orders_details VALUES (394, 10395, 69, 8);
+INSERT INTO tb_orders_details VALUES (395, 10396, 23, 40);
+INSERT INTO tb_orders_details VALUES (396, 10396, 71, 60);
+INSERT INTO tb_orders_details VALUES (397, 10396, 72, 21);
+INSERT INTO tb_orders_details VALUES (398, 10397, 21, 10);
+INSERT INTO tb_orders_details VALUES (399, 10397, 51, 18);
+INSERT INTO tb_orders_details VALUES (400, 10398, 35, 30);
+INSERT INTO tb_orders_details VALUES (401, 10398, 55, 120);
+INSERT INTO tb_orders_details VALUES (402, 10399, 68, 60);
+INSERT INTO tb_orders_details VALUES (403, 10399, 71, 30);
+INSERT INTO tb_orders_details VALUES (404, 10399, 76, 35);
+INSERT INTO tb_orders_details VALUES (405, 10399, 77, 14);
+INSERT INTO tb_orders_details VALUES (406, 10400, 29, 21);
+INSERT INTO tb_orders_details VALUES (407, 10400, 35, 35);
+INSERT INTO tb_orders_details VALUES (408, 10400, 49, 30);
+INSERT INTO tb_orders_details VALUES (409, 10401, 30, 18);
+INSERT INTO tb_orders_details VALUES (410, 10401, 56, 70);
+INSERT INTO tb_orders_details VALUES (411, 10401, 65, 20);
+INSERT INTO tb_orders_details VALUES (412, 10401, 71, 60);
+INSERT INTO tb_orders_details VALUES (413, 10402, 23, 60);
+INSERT INTO tb_orders_details VALUES (414, 10402, 63, 65);
+INSERT INTO tb_orders_details VALUES (415, 10403, 16, 21);
+INSERT INTO tb_orders_details VALUES (416, 10403, 48, 70);
+INSERT INTO tb_orders_details VALUES (417, 10404, 26, 30);
+INSERT INTO tb_orders_details VALUES (418, 10404, 42, 40);
+INSERT INTO tb_orders_details VALUES (419, 10404, 49, 30);
+INSERT INTO tb_orders_details VALUES (420, 10405, 3, 50);
+INSERT INTO tb_orders_details VALUES (421, 10406, 1, 10);
+INSERT INTO tb_orders_details VALUES (422, 10406, 21, 30);
+INSERT INTO tb_orders_details VALUES (423, 10406, 28, 42);
+INSERT INTO tb_orders_details VALUES (424, 10406, 36, 5);
+INSERT INTO tb_orders_details VALUES (425, 10406, 40, 2);
+INSERT INTO tb_orders_details VALUES (426, 10407, 11, 30);
+INSERT INTO tb_orders_details VALUES (427, 10407, 69, 15);
+INSERT INTO tb_orders_details VALUES (428, 10407, 71, 15);
+INSERT INTO tb_orders_details VALUES (429, 10408, 37, 10);
+INSERT INTO tb_orders_details VALUES (430, 10408, 54, 6);
+INSERT INTO tb_orders_details VALUES (431, 10408, 62, 35);
+INSERT INTO tb_orders_details VALUES (432, 10409, 14, 12);
+INSERT INTO tb_orders_details VALUES (433, 10409, 21, 12);
+INSERT INTO tb_orders_details VALUES (434, 10410, 33, 49);
+INSERT INTO tb_orders_details VALUES (435, 10410, 59, 16);
+INSERT INTO tb_orders_details VALUES (436, 10411, 41, 25);
+INSERT INTO tb_orders_details VALUES (437, 10411, 44, 40);
+INSERT INTO tb_orders_details VALUES (438, 10411, 59, 9);
+INSERT INTO tb_orders_details VALUES (439, 10412, 14, 20);
+INSERT INTO tb_orders_details VALUES (440, 10413, 1, 24);
+INSERT INTO tb_orders_details VALUES (441, 10413, 62, 40);
+INSERT INTO tb_orders_details VALUES (442, 10413, 76, 14);
+INSERT INTO tb_orders_details VALUES (443, 10414, 19, 18);
+INSERT INTO tb_orders_details VALUES (444, 10414, 33, 50);
+INSERT INTO tb_orders_details VALUES (445, 10415, 17, 2);
+INSERT INTO tb_orders_details VALUES (446, 10415, 33, 20);
+INSERT INTO tb_orders_details VALUES (447, 10416, 19, 20);
+INSERT INTO tb_orders_details VALUES (448, 10416, 53, 10);
+INSERT INTO tb_orders_details VALUES (449, 10416, 57, 20);
+INSERT INTO tb_orders_details VALUES (450, 10417, 38, 50);
+INSERT INTO tb_orders_details VALUES (451, 10417, 46, 2);
+INSERT INTO tb_orders_details VALUES (452, 10417, 68, 36);
+INSERT INTO tb_orders_details VALUES (453, 10417, 77, 35);
+INSERT INTO tb_orders_details VALUES (454, 10418, 2, 60);
+INSERT INTO tb_orders_details VALUES (455, 10418, 47, 55);
+INSERT INTO tb_orders_details VALUES (456, 10418, 61, 16);
+INSERT INTO tb_orders_details VALUES (457, 10418, 74, 15);
+INSERT INTO tb_orders_details VALUES (458, 10419, 60, 60);
+INSERT INTO tb_orders_details VALUES (459, 10419, 69, 20);
+INSERT INTO tb_orders_details VALUES (460, 10420, 9, 20);
+INSERT INTO tb_orders_details VALUES (461, 10420, 13, 2);
+INSERT INTO tb_orders_details VALUES (462, 10420, 70, 8);
+INSERT INTO tb_orders_details VALUES (463, 10420, 73, 20);
+INSERT INTO tb_orders_details VALUES (464, 10421, 19, 4);
+INSERT INTO tb_orders_details VALUES (465, 10421, 26, 30);
+INSERT INTO tb_orders_details VALUES (466, 10421, 53, 15);
+INSERT INTO tb_orders_details VALUES (467, 10421, 77, 10);
+INSERT INTO tb_orders_details VALUES (468, 10422, 26, 2);
+INSERT INTO tb_orders_details VALUES (469, 10423, 31, 14);
+INSERT INTO tb_orders_details VALUES (470, 10423, 59, 20);
+INSERT INTO tb_orders_details VALUES (471, 10424, 35, 60);
+INSERT INTO tb_orders_details VALUES (472, 10424, 38, 49);
+INSERT INTO tb_orders_details VALUES (473, 10424, 68, 30);
+INSERT INTO tb_orders_details VALUES (474, 10425, 55, 10);
+INSERT INTO tb_orders_details VALUES (475, 10425, 76, 20);
+INSERT INTO tb_orders_details VALUES (476, 10426, 56, 5);
+INSERT INTO tb_orders_details VALUES (477, 10426, 64, 7);
+INSERT INTO tb_orders_details VALUES (478, 10427, 14, 35);
+INSERT INTO tb_orders_details VALUES (479, 10428, 46, 20);
+INSERT INTO tb_orders_details VALUES (480, 10429, 50, 40);
+INSERT INTO tb_orders_details VALUES (481, 10429, 63, 35);
+INSERT INTO tb_orders_details VALUES (482, 10430, 17, 45);
+INSERT INTO tb_orders_details VALUES (483, 10430, 21, 50);
+INSERT INTO tb_orders_details VALUES (484, 10430, 56, 30);
+INSERT INTO tb_orders_details VALUES (485, 10430, 59, 70);
+INSERT INTO tb_orders_details VALUES (486, 10431, 17, 50);
+INSERT INTO tb_orders_details VALUES (487, 10431, 40, 50);
+INSERT INTO tb_orders_details VALUES (488, 10431, 47, 30);
+INSERT INTO tb_orders_details VALUES (489, 10432, 26, 10);
+INSERT INTO tb_orders_details VALUES (490, 10432, 54, 40);
+INSERT INTO tb_orders_details VALUES (491, 10433, 56, 28);
+INSERT INTO tb_orders_details VALUES (492, 10434, 11, 6);
+INSERT INTO tb_orders_details VALUES (493, 10434, 76, 18);
+INSERT INTO tb_orders_details VALUES (494, 10435, 2, 10);
+INSERT INTO tb_orders_details VALUES (495, 10435, 22, 12);
+INSERT INTO tb_orders_details VALUES (496, 10435, 72, 10);
+INSERT INTO tb_orders_details VALUES (497, 10436, 46, 5);
+INSERT INTO tb_orders_details VALUES (498, 10436, 56, 40);
+INSERT INTO tb_orders_details VALUES (499, 10436, 64, 30);
+INSERT INTO tb_orders_details VALUES (500, 10436, 75, 24);
+INSERT INTO tb_orders_details VALUES (501, 10437, 53, 15);
+INSERT INTO tb_orders_details VALUES (502, 10438, 19, 15);
+INSERT INTO tb_orders_details VALUES (503, 10438, 34, 20);
+INSERT INTO tb_orders_details VALUES (504, 10438, 57, 15);
+INSERT INTO tb_orders_details VALUES (505, 10439, 12, 15);
+INSERT INTO tb_orders_details VALUES (506, 10439, 16, 16);
+INSERT INTO tb_orders_details VALUES (507, 10439, 64, 6);
+INSERT INTO tb_orders_details VALUES (508, 10439, 74, 30);
+INSERT INTO tb_orders_details VALUES (509, 10440, 2, 45);
+INSERT INTO tb_orders_details VALUES (510, 10440, 16, 49);
+INSERT INTO tb_orders_details VALUES (511, 10440, 29, 24);
+INSERT INTO tb_orders_details VALUES (512, 10440, 61, 90);
+INSERT INTO tb_orders_details VALUES (513, 10441, 27, 50);
+INSERT INTO tb_orders_details VALUES (514, 10442, 11, 30);
+INSERT INTO tb_orders_details VALUES (515, 10442, 54, 80);
+INSERT INTO tb_orders_details VALUES (516, 10442, 66, 60);
+INSERT INTO tb_orders_details VALUES (517, 10443, 11, 6);
+INSERT INTO tb_orders_details VALUES (518, 10443, 28, 12);
