@@ -132,3 +132,109 @@ INSERT INTO tb_avaliacoes(id, aluno_id, turma_id, nota1, nota2, nota3, nota4, no
     (8, 108, 202, 7.0, 9.0, 7.0, 9.5, 8.5),
     (9, 109, 201, 8.5, 7.0, 9.0, 7.5, 9.0),
     (10, 110, 202, 6.5, 8.5, 7.5, 8.0, 9.0);
+
+-- Criar view para visualizar os dados completos
+CREATE VIEW vw_tb_avaliacoes AS
+SELECT *, ((nota1 + nota2 + nota3 + nota4 + nota5) / 5) AS Media FROM tb_avaliacoes
+ORDER BY Media DESC;
+
+SELECT * FROM vw_tb_avaliacoes;
+
+-- EXERCÍCIOS CARDINALIDADE ------------------------------------------
+-- 1:1 (Um para Um)
+-- Relacionamento entre Aluno e Bolsa de Estudo
+
+CREATE TABLE IF NOT EXISTS tb_alunos(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(200) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS tb_bolsas_de_estudo(
+    id INT PRIMARY KEY,
+    tipo VARCHAR(100) NOT NULL,
+    porcentagem FLOAT NOT NULL,
+
+    FOREIGN KEY(id) REFERENCES tb_alunos(id)
+);
+INSERT INTO tb_alunos(nome) VALUES
+    ("José da Silva"),
+    ("Maria das Graças"),
+    ("João Souza");
+
+INSERT INTO tb_bolsas_de_estudo(id, tipo, porcentagem) VALUES
+    (1, "INTEGRAL", 100),
+    (2, "PARCIAL 1", 60),
+    (3, "PARCIAL 2", 40);
+
+-- 1:N (Um para Muitos)
+-- Relacionamento entre Departamento e Funcionários:
+CREATE TABLE IF NOT EXISTS tb_departamentos(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(200) NOT NULL
+);
+INSERT INTO tb_departamentos(nome) VALUES
+    ("Financeiro"),
+    ("Recursos Humanos"),
+    ("TI");
+
+CREATE TABLE IF NOT EXISTS tb_funcionarios(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    departamento_id INT NOT NULL,
+    nome VARCHAR(200),
+    salario FLOAT NOT NULL
+);
+INSERT INTO tb_funcionarios(departamento_id, nome, salario) VALUES
+    (1, "Carlos", 2000),
+    (1, "Amanda", 3100),
+    (1, "Suzana", 1100),
+    (2, "Bruna", 1900),
+    (2, "Rogério", 800),
+    (3, "José", 1500);
+
+-- N:N (Muitos para Muitos)
+-- Relacionamento entre Músicas e Playlists:
+CREATE TABLE IF NOT EXISTS tb_musicas(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(200) NOT NULL,
+    artista VARCHAR(200) NOT NULL,
+);
+INSERT INTO tb_musicas(nome, artista) VALUES
+    ("Robocop Gay", "Mamonas Assassinas"),
+    ("Chico Mineiro", "Tonico e Tinoco"),
+    ("The Kids aren't alright", "Offspring"),
+    ("We are the champions", "Queen"),
+    ("Thriller", "Michael Jackson");
+
+CREATE TABLE IF NOT EXISTS tb_playlists(
+    id INT PRIMARY KEY NOT NULL,
+    nome VARCHAR(200) NOT NULL
+);
+INSERT INTO tb_playlists(nome) VALUES
+    ("Música caipira"),
+    ("Música brasileira"),
+    ("Música internacional");
+
+-- Criar a tabela associativa
+CREATE TABLE IF NOT EXISTS tb_musicas_playlists(
+    musica_id INT NOT NULL,
+    playlist_id INT NOT NULL,
+
+    PRIMARY KEY(musica_id, playlist_id),
+
+    FOREIGN KEY(musica_id) REFERENCES tb_musicas(id),
+    FOREIGN KEY(playlist_id) REFERENCES tb_playlists(id)
+);
+
+INSERT INTO tb_musicas_playlists(musica_id, playlist_id) VALUES
+    (1, 2),
+    (2, 2),
+    (2, 1),
+    (3, 3),
+    (4, 3),
+    (5, 3);
+
+SELECT a.nome, a.artista, b.nome FROM tb_musicas a
+INNER JOIN tb_musicas_playlists mp
+ON a.id = mp.musica_id
+INNER JOIN tb_playlists b
+ON mp.playlist_id = b.id;
