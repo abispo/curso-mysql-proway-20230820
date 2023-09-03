@@ -121,7 +121,7 @@ CREATE TABLE IF NOT EXISTS tb_avaliacoes(
 
     PRIMARY KEY (id, aluno_id, turma_id)
 );
-INSERT INTO tb_avaliacoes(id, aluno_id, nota1, nota2, nota3, nota4, nota5) VALUES
+INSERT INTO tb_avaliacoes(id, aluno_id, turma_id, nota1, nota2, nota3, nota4, nota5) VALUES
     (1, 101, 201, 8.5, 7.5, 9.0, 7.0, 8.0, 8.0),
     (2, 102, 202, 7.0, 8.5, 7.5, 8.0, 9.0, 8.0),
     (3, 103, 201, 9.0, 8.5, 7.5, 8.5, 9.5, 8.8),
