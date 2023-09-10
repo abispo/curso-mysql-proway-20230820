@@ -69,3 +69,20 @@ AS SELECT
     COUNT(CASE WHEN sexo = 'F' THEN 1 END) qtd_sexo_f FROM tb_clientes;
 
 SELECT * FROM tb_clientes_agregado_sexo;
+
+-- Desafio!
+
+CREATE TABLE IF NOT EXISTS tb_pedidos(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    cliente_id INT NOT NULL,
+    data_pedido DATE NOT NULL,
+    valor_pedido FLOAT NOT NULL
+);
+
+/*
+    Criar a tabela tb_pedidos_agregado_por_cliente
+
+    Essa tabela terá 3 colunas: id do cliente, nome do cliente e valor total de compras
+    Crie essa tabela e insira os dados utilizando o comando CREATE TABLE ... AS SELECT ...
+    Dica: Você vai precisar utilizar INNER JOIN e GROUP BY
+*/
