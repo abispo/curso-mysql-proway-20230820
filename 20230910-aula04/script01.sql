@@ -118,3 +118,13 @@ INSERT INTO tb_pedidos (cliente_id, data_pedido, valor_pedido) VALUES
     Crie essa tabela e insira os dados utilizando o comando CREATE TABLE ... AS SELECT ...
     Dica: Você vai precisar utilizar INNER JOIN e GROUP BY
 */
+
+SELECT
+	tb_clientes.id,
+    tb_clientes.nome,
+    FORMAT(SUM(tb_pedidos.valor_pedido), 2) AS total
+FROM tb_clientes
+INNER JOIN tb_pedidos ON
+tb_clientes.id = tb_pedidos.cliente_id
+GROUP BY (tb_pedidos.cliente_id)
+ORDER BY tb_pedidos.cliente_id;
