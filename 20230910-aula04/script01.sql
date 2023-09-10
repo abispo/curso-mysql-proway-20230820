@@ -5,7 +5,7 @@ CREATE DATABASE IF NOT EXISTS 20230910_aula04;
 USE 20230910_aula04;
 
 -- Permitir que cláusulas DELETE e UPDATE sejam executadas sem restrição
-SET SQL_SAFE_UPDATES=1;
+SET SQL_SAFE_UPDATES=0;
 
 /*
 O comando CREATE TABLE permite criar uma tabela e automaticamente inserir
@@ -118,7 +118,7 @@ INSERT INTO tb_pedidos (cliente_id, data_pedido, valor_pedido) VALUES
     Crie essa tabela e insira os dados utilizando o comando CREATE TABLE ... AS SELECT ...
     Dica: Você vai precisar utilizar INNER JOIN e GROUP BY
 */
-
+CREATE TABLE IF NOT EXISTS tb_pedidos_agregados_por_cliente AS
 SELECT
 	tb_clientes.id,
     tb_clientes.nome,
@@ -128,3 +128,60 @@ INNER JOIN tb_pedidos ON
 tb_clientes.id = tb_pedidos.cliente_id
 GROUP BY (tb_pedidos.cliente_id)
 ORDER BY tb_pedidos.cliente_id;
+
+DROP TABLE IF EXISTS tb_clientes_agregado_sexo;
+DROP TABLE IF EXISTS tb_pedidos_agredados_por_cliente;
+
+-- ----------------------------------------------------------
+
+-- INSERT com SELECT
+-- Exemplo: Inserir um novo pedido não sabendo o id do cliente que o fez
+
+INSERT INTO tb_pedidos(cliente_id, data_pedido, valor_pedido)
+VALUES ((
+    SELECT id FROM tb_clientes
+    WHERE
+        nome = "Pedro Paulo Souza" AND
+        data_de_nascimento = "1999-05-05" AND
+        sexo = "M"
+    ), NOW(), 254.93
+);
+
+SELECT * FROM tb_pedidos;
+
+-- UPDATE com SELECT (subconsulta)
+-- Alterar o valor do pedido para 500 para o id 5
+UPDATE tb_pedidos SET valor_pedido = 500 WHERE cliente_id IN (
+	SELECT id FROM tb_clientes
+    WHERE
+        nome = "Pedro Paulo Souza" AND
+        data_de_nascimento = "1999-05-05" AND
+        sexo = "M"
+);
+
+SELECT * FROM tb_pedidos;
+
+-- desafio!
+-- Aumentar em 10% o valor_pedido da tabela tb_pedidos para os clientes
+-- Maria da Silva e Ana Maria Silva. Utilize uma subconsulta como no
+-- exemplo anterior
+-- (valor_pedido + (valor_pedido * 0.1))
+
+UPDATE tb_pedidos SET valor_pedido = valor_pedido * 1.1
+WHERE cliente_id IN (
+	SELECT id FROM tb_clientes
+    WHERE
+        nome = "Maria da Silva" OR nome = "Ana Maria Silva"
+);
+
+-- DELETE com SELECT (subconsulta)
+-- Excluir todos os pedidos dos clientes
+-- Pedro Paulo Souza e Luiza das Neves
+DELETE FROM tb_pedidos
+WHERE cliente_id IN (
+	SELECT id FROM tb_clientes
+    WHERE
+        nome = "Pedro Paulo Souza" OR nome = "Luiza das Neves"
+);
+
+SELECT * FROM tb_pedidos WHERE cliente_id IN (5, 6);
