@@ -185,3 +185,7 @@ WHERE cliente_id IN (
 );
 
 SELECT * FROM tb_pedidos WHERE cliente_id IN (5, 6);
+
+-- Apagar as tabelas
+DROP TABLE IF EXISTS tb_pedidos;
+DROP TABLE IF EXISTS tb_clientes;
