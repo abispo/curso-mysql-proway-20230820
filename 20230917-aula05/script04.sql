@@ -105,3 +105,64 @@ INSERT INTO tb_membros(nome, email, data_de_nascimento) VALUES
     
 SELECT * FROM tb_membros;
 SELECT * FROM tb_lembretes;
+
+-- ================= TRIGGER EM UPDATE =================
+
+CREATE TABLE IF NOT EXISTS tb_vendas(
+	id INT AUTO_INCREMENT,
+    cliente_id INT NOT NULL,
+    produto VARCHAR(200) NOT NULL,
+    quantidade INT NOT NULL,
+    CHECK(quantidade > 0),
+    
+    PRIMARY KEY(id, cliente_id),
+    FOREIGN KEY(cliente_id) REFERENCES tb_clientes(id)
+);
+
+INSERT INTO tb_vendas(cliente_id, produto, quantidade) VALUES
+	(2, "Pilhas recarregáveis", 0);		-- Não será inserido, pois viola a regra (CHECK) da quantidade do produto > 0
+
+INSERT INTO tb_vendas(cliente_id, produto, quantidade) VALUES(2, "Mochila à prova d'água", 2);
+INSERT INTO tb_vendas(cliente_id, produto, quantidade) VALUES(1, "Churrasqueira elétrica", 1);
+INSERT INTO tb_vendas(cliente_id, produto, quantidade) VALUES(4, "Pen-drive", 3);
+
+SELECT * FROM tb_vendas;
+
+DROP TRIGGER IF EXISTS tg_pre_atualizar_quantidade_produto;
+
+DELIMITER $$
+
+CREATE TRIGGER tg_pre_atualizar_quantidade_produto
+BEFORE UPDATE
+ON tb_vendas FOR EACH ROW
+BEGIN
+	DECLARE mensagem_erro VARCHAR(300);
+    
+    SET mensagem_erro = CONCAT(
+		"A quantidade de ",
+        new.produto,
+        " não pode ser maior do que 5. Mantenha a quantidade anterior de ",
+        old.quantidade,
+        " ou siga as instruções."
+	);
+    
+    IF new.produto = "Pen-drive" AND new.quantidade > 5 THEN
+		SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = mensagem_erro;
+	END IF;
+END$$
+
+DELIMITER ;
+
+-- Atualizando os registros. Não deve ser gerada uma mensagem de erro, pois o produto não é Pen-drive
+UPDATE tb_vendas SET quantidade = 3 WHERE id = 1;
+UPDATE tb_vendas SET quantidade = 6 WHERE id = 2;
+
+-- Atualizando a venda de pendrives. Também não deve disparar a mensagem de erro, pois a nova quantidade
+-- é menor ou igual a 5, apenas do produto ser Pen-drive
+UPDATE tb_vendas SET quantidade = 2 WHERE id = 3;
+SELECT * FROM tb_vendas;
+
+-- Deve ser gerada uma exceção pelo próprio MySQL. Pois além do produto ser um Pen-drive, a quantidade é
+-- maior do que 5
+UPDATE tb_vendas SET quantidade = 10 WHERE id = 3;
