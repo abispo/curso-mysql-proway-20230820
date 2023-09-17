@@ -190,3 +190,47 @@ CALL sp_incrementa_contador(@contador);
 CALL sp_incrementa_contador(@contador);
 
 SELECT @contador;
+
+-- Utilizando controle de condição dentro da stored procedure
+
+DROP PROCEDURE IF EXISTS sp_calculo_processamento_galpao;
+
+DELIMITER $$
+
+CREATE PROCEDURE sp_calculo_processamento_galpao(
+	IN in_galpao_id INT,
+    OUT out_mensagem_processamento VARCHAR(200)
+)
+BEGIN
+	DECLARE v_nome_galpao VARCHAR(200) DEFAULT "";
+    DECLARE v_cidade_id INT DEFAULT 0;
+    
+    SELECT nome INTO v_nome_galpao FROM tb_galpoes
+    WHERE id = in_galpao_id;
+    
+    SELECT cidade_id INTO v_cidade_id FROM tb_galpoes
+    WHERE id = in_galpao_id;
+    
+	CASE v_cidade_id
+		WHEN 4 THEN
+			SET out_mensagem_processamento = CONCAT("O galpão '", v_nome_galpao, "' processa o pedido em 1 dia");
+		WHEN 5 THEN
+			SET out_mensagem_processamento = CONCAT("O galpão '", v_nome_galpao, "' processa o pedido em 2 dias");
+		ELSE
+			SET out_mensagem_processamento = CONCAT("O galpão '", v_nome_galpao, "' processa o pedido em 3 dias");
+	END CASE;
+END$$
+
+DELIMITER ;
+
+-- Calculo dos dias de processamento do galpão 4
+CALL sp_calculo_processamento_galpao(4, @mensagem);
+SELECT @mensagem;
+
+-- Calculo de dias de processamento do galpão 7
+CALL sp_calculo_processamento_galpao(7, @mensagem);
+SELECT @mensagem;
+
+-- Calculo de dias de processamento do galpão 3
+CALL sp_calculo_processamento_galpao(3, @mensagem);
+SELECT @mensagem;
