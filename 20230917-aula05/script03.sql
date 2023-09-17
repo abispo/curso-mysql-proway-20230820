@@ -145,7 +145,7 @@ INSERT INTO tb_galpoes(cidade_id, nome) VALUES
     (2, "Galpão SC 03"),
     (5, "Galpão SC 04");
     
--- Criar uma stored procedure com um parâmetro de saída contendo a quantidade de galpões que existem em uma determinada cidade
+-- Criar uma stored procedure com um parâmetro de saída (OUT) contendo a quantidade de galpões que existem em uma determinada cidade
 
 DROP PROCEDURE IF EXISTS sp_pegar_qtd_galpoes_por_cidade;
 
@@ -165,6 +165,28 @@ DELIMITER ;
 SHOW PROCEDURE STATUS;
 
 -- Chamar a stored procedure. Perceba que o padrão out é uma variável
-CALL sp_pegar_qtd_galpoes_por_cidade(2, @total);
-
+CALL sp_pegar_qtd_galpoes_por_cidade(1, @total);
 SELECT @total;
+
+-- Criar uma stored procedure que funcione como um incremento de um valor
+-- Criar a variável contador
+
+DROP PROCEDURE IF EXISTS sp_incrementa_contador;
+
+DELIMITER $$
+
+CREATE PROCEDURE sp_incrementa_contador(
+	INOUT contador INT
+)
+BEGIN
+	SET contador = contador + 1;
+END$$
+
+DELIMITER ;
+
+SET @contador = 1;
+CALL sp_incrementa_contador(@contador);
+CALL sp_incrementa_contador(@contador);
+CALL sp_incrementa_contador(@contador);
+
+SELECT @contador;
