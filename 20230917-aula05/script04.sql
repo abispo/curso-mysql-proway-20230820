@@ -54,3 +54,54 @@ SELECT * FROM tb_salas_agregado;
 -- capacidades das salas
 INSERT INTO tb_salas(nome, capacidade) VALUES ("Red", 25);
 SELECT * FROM tb_salas_agregado;
+
+-- Criar um trigger que será disparado após um registro ser inserido na tabela tb_membros
+
+-- Criar a tabela tb_membros
+CREATE TABLE IF NOT EXISTS tb_membros(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(200) NOT NULL,
+    email VARCHAR(200),
+    data_de_nascimento DATE
+);
+
+-- Criar a tabela tb_lembretes
+CREATE TABLE IF NOT EXISTS tb_lembretes(
+	id INT AUTO_INCREMENT,
+    membro_id INT NOT NULL,
+    mensagem VARCHAR(200) NOT NULL,
+    
+    PRIMARY KEY(id, membro_id),
+    FOREIGN KEY(membro_id) REFERENCES tb_membros(id)
+);
+
+-- Criar o trigger que irá preencher a tabela tb_lembretes, caso algum dado falte no cadastro
+DROP TRIGGER IF EXISTS tg_pos_lembretes_usuario;
+
+DELIMITER $$
+
+CREATE TRIGGER tg_pos_lembretes_usuario
+AFTER INSERT
+ON tb_membros FOR EACH ROW
+BEGIN
+	IF new.email IS NULL THEN
+		INSERT INTO tb_lembretes(membro_id, mensagem)
+        VALUES (new.id, CONCAT("Olá ", new.nome, ". Por favor, preencha o seu e-mail."));
+	END IF;
+    
+	IF new.data_de_nascimento IS NULL THEN
+		INSERT INTO tb_lembretes(membro_id, mensagem)
+        VALUES (new.id, CONCAT("Olá ", new.nome, ". Por favor, preencha a sua data de nascimento."));
+	END IF;
+END$$
+
+DELIMITER ;
+
+INSERT INTO tb_membros(nome, email, data_de_nascimento) VALUES
+	("João da Silva", "joao@email.com", "2000-07-21"),		-- Todos os dados preenchidos
+    ("Maria de Lourdes", "maria@email.com", NULL),			-- Sem a data de nascimento
+    ("Jorge de Almeida", NULL, "1993-08-04"),				-- Sem o e-mail
+    ("Carlos Mendes", NULL, NULL);							-- Apenas o nome
+    
+SELECT * FROM tb_membros;
+SELECT * FROM tb_lembretes;
