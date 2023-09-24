@@ -58,3 +58,12 @@ Detalhe: Esse registro só será inserido caso a pontuação antiga seja menor d
 4) Criar o trigger tg_pre_remocao_salario que vai salvar os dados na tabela tb_historico salario quando for aplicado um comando `DELETE` na tabela tb_salarios. Deve ser uma triggerm `BEFORE DELETE`
 
 5) Remover alguns registros da tabela `tb_salarios` para verificar o funcionamento do trigger.
+
+
+### AFTER DELETE
+
+1) Utilizar a tabela tb_salarios
+
+2) Criar a tabela tb_orcamento_salarios, com a coluna `total`, que será do tipo `FLOAT NOT NULL`
+
+3) Criar um trigger que a cada remoção de um registro da tabela tb_salarios, salve o valor total (SUM) desses salarios na tabela tb_orcamento_salarios
